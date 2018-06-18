@@ -1,0 +1,203 @@
+/* line 3, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.error {
+  color: #e00 !important;
+}
+
+/* line 6, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.success {
+  color: #42a900 !important;
+}
+
+/* line 9, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.warning {
+  color: #ff9900 !important;
+}
+
+/* line 13, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+tr.click-for-details,
+tr.click-for-details:nth-of-type(odd) {
+  cursor: pointer;
+  transition: all 150ms linear;
+}
+
+/* line 17, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+tr.click-for-details:hover,
+tr.click-for-details:nth-of-type(odd):hover {
+  background-color: #e8f0f9 !important;
+  color: #2d3a4a;
+}
+
+/* line 21, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+tr.click-for-details.is_closed,
+tr.click-for-details:nth-of-type(odd).is_closed {
+  opacity: .45;
+}
+
+/* line 27, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+#ui_dialog_1 {
+  position: relative;
+}
+
+/* line 29, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+#ui_dialog_1 #ui_dialog_1_content {
+  position: relative;
+  height: 100%;
+}
+
+/* line 32, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+#ui_dialog_1 #ui_dialog_1_content div {
+  height: 100%;
+}
+
+/* line 39, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+#highcharts-usage {
+  min-width: 310px;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* line 50, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+table td.w5, table th.w5 {
+  width: 5%;
+}
+
+/* line 51, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+table td.w10, table th.w10 {
+  width: 10%;
+}
+
+/* line 52, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+table td.w20, table th.w20 {
+  width: 20%;
+}
+
+/* line 53, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+table td.w30, table th.w30 {
+  width: 30%;
+}
+
+/* line 54, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+table td.w40, table th.w40 {
+  width: 40%;
+}
+
+/* line 55, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+table td.w50, table th.w50 {
+  width: 50%;
+}
+
+/* line 71, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+img.thumbnails {
+  display: inline;
+  width: 130px;
+  height: auto;
+  margin: 0 .5em 0 0;
+  vertical-align: center;
+  opacity: .7;
+  transition: opacity 200ms linear;
+}
+
+/* line 79, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+img.thumbnails:hover {
+  opacity: 1;
+}
+
+/* line 84, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+ul.audit-list li {
+  list-style-type: none;
+}
+
+/* line 86, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+ul.audit-list li li {
+  font-size: 1.5rem;
+}
+
+/* line 92, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+iframe {
+  border: none;
+}
+
+/* line 99, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+form.highcharts-opts {
+  margin-bottom: 1rem;
+}
+
+/* line 101, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+form.highcharts-opts label {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* line 105, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+form.highcharts-opts button {
+  border: none !important;
+  font-weight: 400;
+  font-size: 1.25rem;
+  padding: .25rem .75rem !important;
+  vertical-align: middle;
+}
+
+/* line 114, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.report_status__color_indicator {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 3rem;
+  vertical-align: middle;
+  background-color: #ccc;
+}
+
+/* line 121, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.report_status__color_indicator.report_status__color_indicator--red {
+  background-color: #ce0000;
+}
+
+/* line 124, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.report_status__color_indicator.report_status__color_indicator--amber {
+  background-color: #ffc700;
+}
+
+/* line 127, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+.report_status__color_indicator.report_status__color_indicator--green {
+  background-color: #4fbb00;
+}
+
+/* line 133, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .zeroharm-report-table {
+  border-bottom: 1px solid #ddd;
+  border: 2px solid #ddd;
+}
+
+/* line 136, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .zeroharm-report-table td.col_name {
+  font-weight: 500;
+}
+
+/* line 140, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .well {
+  border: 2px solid #ddd;
+}
+
+/* line 142, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .well h4 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* line 146, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .well hr {
+  border-top: 2px solid #ddd;
+}
+
+/* line 149, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .well label {
+  margin-bottom: 0px;
+}
+
+/* line 152, C:/xampp/htdocs/DoverApp/assets/admin/scss/style.scss */
+body#app-admin.report .well .note {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=../css/style.map */

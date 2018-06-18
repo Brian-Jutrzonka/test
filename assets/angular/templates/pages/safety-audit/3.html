@@ -1,0 +1,43 @@
+<div class="container safety-audit-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-content">
+				<h1 id="form-heading" translate="home.routes.safetyAudit.title"></h1>
+				<safety-a-3></safety-a-3>
+				<div id="errors" class="errors-container"></div>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="red-button">
+						<a href="/#/safety-audit/2" translate="global.buttons.backButton"></a>
+					</div>
+					<safety-a-validation></safety-a-validation>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<sm-scene id="safety-audit-menu-trigger" scene-id="'safety-audit-menu-scene'" trigger-hook="0.08"></sm-scene>
+<div id="safety-audit-menu" class="mobile">
+	<div id="safety-audit-menu-close"><span ng-click="toggleMenu()"><i class="fa fa-times" aria-hidden="true"></i></span></div>
+	<sm-class-toggle scene-id="'safety-audit-menu-scene'" classes="'fixed'" target-element="'parent'"></sm-class-toggle>
+	<div id="safety-audit-menu-button">
+		<a id="safety-audit-menu-button-link" ng-click="toggleMenu()">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</a>
+	</div>
+	<div id="safety-audit-menu-title">
+		Menu
+	</div>
+	<div class="safety-audit-menu-option" ng-repeat="check in list">
+		<div class="safety-audit-menu-link">
+			<a ng-click="anchor((check.aElName | limitTo:1) + check.aElID)">
+				<div class="safety-audit-menu-link-text">
+					{{check.aElName}}
+				</div>
+				<div class="safety-audit-menu-check">
+					<div class="safety-audit-menu-check-no safety-audit-menu-check-yn" ng-if="$parent.listA21[$index][1] === ''"></div>
+					<div class="safety-audit-menu-check-yes safety-audit-menu-check-yn {{$parent.listA21[$index][1] | limitTo:6 | lowercase | removeSpaces}}" ng-if="$parent.listA21[$index][1] != ''"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

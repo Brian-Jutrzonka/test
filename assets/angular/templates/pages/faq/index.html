@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="faq-content">
+				<h1>
+					FAQ
+				</h1>
+				<div id="faq-section">
+					<div id="content">
+						
+					</div>
+					<div id="accordion">
+						<div class="accordion-entry" ng-repeat="entries in language.global.faq.entries">
+							<button class="accordion-entry-link" type="button" data-toggle="collapse" data-target="#accordion-entry-content-{{$index}}" aria-expanded="false" aria-controls="collapseExample">
+								{{entries.title}} <i class="fa fa-caret-down"></i>
+							</button>
+							<div class="collapse accordion-entry-content" id="accordion-entry-content-{{$index}}">
+								<div class="accordion-entry-content-inner">
+									{{entries.description}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="notice-content" ng-bind-html="notice.content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

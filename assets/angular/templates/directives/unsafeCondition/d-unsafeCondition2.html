@@ -1,0 +1,269 @@
+<div class="directive">
+	<div class="form-radio-container form-radio-container-long">
+		<div class="form-input form-radio-button-input" ng-repeat="check in list">
+		<!-- Checkboxes for Main Check's (Top Level) -->
+			<div class="form-radio-buttons-container">
+				<div class="form-radio-button">
+					<input type="checkbox" ng-model="$parent.listA21[$index][1]" ng-value="$parent.listA21[$index][1]" ng-click="changeA('A21', $parent.listA21[$index][1], $index)" class="form-radio-buttons cb-empty cb-level1" name="cb-level1"/>
+					<div class="form-radio-check"></div>
+				</div>
+				<div class="form-radio-label">
+					{{check.checkName}}
+				</div>
+				<div class="route-debug">Name: listA21 <br> Value: {{listA21}}</div>
+			</div>
+		<!-- Checkboxes for Sub Check 1's (Second Level) -->
+			<div ng-if="$parent.listA21[$index][1]===true && $parent.listA21[$index][2][1].length > 1 && check.subCheck1Type === 'c'" class="animate-if">
+				<div class="form-sub-section">
+					<div class="form-input-label">
+						{{check.subTitle1}}<span class="form-required">*</span><span class="select-all" translate="global.messages.selectAll"></span>
+					</div>
+					<div class="form-input form-radio-button-input" ng-repeat="subCheck in check.subCheck1">
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="checkbox" ng-model="$parent.listA21[$parent.$index][2][1][$index][1]" ng-value="subCheck" ng-click="changeA('A211C', $parent.listA21[$parent.$index][2][1][$index][1], $index, $parent.$index)" class="form-radio-buttons cb-level2{{$parent.$index}}" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label">
+								{{$parent.listA21[$parent.$index][2][1][$index][0]}}
+							</div>
+						</div>
+					<!-- Checkboxes for subSub Check 1's (Third Level) -->
+						<div ng-if="$parent.listA21[$parent.$index][2][1][$index][1] === true && $parent.listA21[$parent.$index][2][1][$index][2] !== undefined && subCheck[1][1] === 'c'" class="animate-if form-sub-section"> <!--if statement -                             -->
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}<span class="select-all" translate="global.messages.selectAll"></span>
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="checkbox" ng-model="$parent.listA21[$parent.$parent.$parent.$index][2][1][$parent.$parent.$index][2][1][$index][1]" ng-value="subCheck" ng-click="changeA('A211CSub', $parent.listA21[$parent.$parent.$parent.$index][2][1][$parent.$parent.$index][2][1][$index][1], $index, $parent.$index, subCheck[1])" class="form-radio-buttons cb-level3{{$parent.$parent.$index}}" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}} 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Radio Buttons for subSub Check 1's (Third Level) -->
+						<div ng-if="$parent.listA21[$parent.$index][2][1][$index][1] === true && $parent.listA21[$parent.$index][2][1][$index][2] !== undefined && subCheck[1][1] === 'r'" class="animate-if form-sub-section"> <!--if statement -                             -->
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="radio" ng-model="$parent.listA21[$parent.$parent.$parent.$index][2][1][$parent.$parent.$index][2][1][0]" ng-value="subSubCheck[0]" ng-click="changeA('A211RSub', $parent.listA21[$parent.$parent.$parent.$index][2][1][$parent.$parent.$index][2][1][0], $index, $parent.$index, subCheck[1])" name="subCheck{{$parent.$parent.$index}}{{check.subCheck1Type}}1" class="form-radio-buttons form-element-required" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Radio Button Sets for Sub Check 1's (Second Level) -->
+			<div ng-if="$parent.listA21[$index][1]===true && $parent.listA21[$index][2][0] !== undefined && check.subCheck1Type === 'r'" class="animate-if">
+				<div class="form-sub-section">
+					<div class="form-input-label">
+						{{check.subTitle1}}<span class="form-required">*</span>
+					</div>
+					<div class="form-input form-radio-button-input" ng-repeat="subCheck in check.subCheck1">
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="radio"
+											 ng-model="$parent.listA21[$parent.$index][2][1][0]"
+											 ng-value="subCheck[0]" ng-click="changeA('A211R', $parent.listA21[$parent.$index][2][1][0], $index, $parent.$index, subCheck[1])"
+											 name="subCheck{{$parent.$index}}{{check.subCheck1Type}}1"
+											 class="form-radio-buttons form-element-required" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label">
+								{{subCheck[0]}}
+							</div>
+						</div>
+					<!-- Checkboxes for subSub Check 1's (Third Level) -->
+						<div ng-if="$parent.$parent.listA21[$parent.$parent.$index][2][1][0] === subCheck[0] && $parent.$parent.listA21[$parent.$parent.$index][2][1][1].length >= 1 && subCheck[1][1] === 'c'" class="animate-if form-sub-section"> 
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}<span class="select-all" translate="global.messages.selectAll"></span>
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="checkbox"
+														 ng-model="$parent.listA21[$parent.$parent.$parent.$index][2][1][1][1][$index][1]"
+														 ng-value="subCheck"
+														 ng-click="changeA('A211CSub', $parent.listA21[$parent.$parent.$parent.$index][2][1][1][1][$index][1], $index, $parent.$index, 'c')"
+														 name="subCheck{{$parent.$parent.$index}}{{check.subCheck1Type}}1" class="form-radio-buttons" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Radio Buttons for subSub Check 1's (Third Level) -->
+						<div ng-if="$parent.$parent.listA21[$parent.$parent.$index][2][1][0] === subCheck[0] && subCheck[1][1] === 'r'" class="animate-if form-sub-section"> <!--if statement -                             -->
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="radio"
+														 ng-model="$parent.listA21[$parent.$parent.$parent.$index][2][1][1][1][0]"
+														 ng-value="subSubCheck[0]"
+														 ng-click="changeA('A211RSub', $parent.listA21[$parent.$parent.$parent.$index][2][1][1][1][0], $index, $parent.$parent.$parent.$index, subCheck[1])"
+														 name="subCheck{{$parent.$parent.$index}}{{check.subCheck1Type}}1" class="form-radio-buttons form-element-required" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Checkboxes for Sub Check 2's (Second Level) -->
+			<div ng-if="$parent.listA21[$index][1]===true && $parent.listA21[$index][3][1].length > 1 && check.subCheck2Type === 'c'" class="animate-if">
+				<div class="form-sub-section">
+					<div class="form-input-label">
+						{{check.subTitle2}}<span class="form-required">*</span><span class="select-all" translate="global.messages.selectAll"></span>
+					</div>
+					<div class="form-input form-radio-button-input" ng-repeat="subCheck in check.subCheck2">
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="checkbox" ng-model="$parent.listA21[$parent.$index][3][1][$index][1]" ng-value="subCheck" ng-click="changeA('A212C', $parent.listA21[$parent.$index][3][1][$index][1], $index, $parent.$index)" class="form-radio-buttons" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label">
+								{{$parent.listA21[$parent.$index][3][1][$index][0]}}
+							</div>
+						</div>
+						<!-- Checkboxes for subSub Check 2's (Third Level) -->
+						<div ng-if="$parent.listA21[$parent.$index][3][1][$index][1] === true && $parent.listA21[$parent.$index][3][1][$index][2] !== undefined && subCheck[1][1] === 'c'" class="animate-if form-sub-section"> <!--if statement -                             -->
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}<span class="select-all" translate="global.messages.selectAll"></span>
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="checkbox" ng-model="$parent.listA21[$parent.$parent.$parent.$index][3][1][$parent.$parent.$index][2][1][$index][1]" ng-value="subCheck" ng-click="changeA('A212CSub', $parent.listA21[$parent.$parent.$parent.$index][3][1][$parent.$parent.$index][2][1][$index][1], $index, $parent.$index, subCheck[1])" class="form-radio-buttons" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Radio Buttons for subSub Check 2's (Third Level) -->
+						<div ng-if="$parent.listA21[$parent.$index][3][1][$index][1] === true && $parent.listA21[$parent.$index][3][1][$index][2] !== undefined && subCheck[1][1] === 'r'" class="animate-if form-sub-section"> <!--if statement -                             -->
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="radio" ng-model="$parent.listA21[$parent.$parent.$parent.$index][3][1][$parent.$parent.$index][2][1][0]" ng-value="subSubCheck[0]" ng-click="changeA('A212RSub', $parent.listA21[$parent.$parent.$parent.$index][3][1][$parent.$parent.$index][2][1][0], $index, $parent.$index, subCheck[1])" name="subCheck{{$parent.$parent.$index}}{{check.subCheck2Type}}1" class="form-radio-buttons form-element-required" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Radio Button Sets for Sub Check 2's (Second Level) -->
+			<div ng-if="$parent.listA21[$index][1]===true && $parent.listA21[$index][3][0] !== undefined && check.subCheck2Type === 'r'" class="animate-if">
+				<div class="form-sub-section">
+					<div class="form-input-label">
+						{{check.subTitle2}}<span class="form-required">*</span>
+					</div>
+					<div class="form-input form-radio-button-input" ng-repeat="subCheck in check.subCheck2">
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="radio"
+											 ng-model="$parent.listA21[$parent.$index][3][1][0]"
+											 ng-value="subCheck[0]" ng-click="changeA('A212R', $parent.listA21[$parent.$index][3][1][0], $index, $parent.$index, subCheck[1])"
+											 name="subCheck{{$parent.$index}}{{check.subCheck2Type}}1"
+											 class="form-radio-buttons form-element-required" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label">
+								{{subCheck[0]}}
+							</div>
+						</div>
+					<!-- Checkboxes for subSub Check 2's (Third Level) -->
+						<div ng-if="$parent.$parent.listA21[$parent.$parent.$index][3][1][0] === subCheck[0] && $parent.$parent.listA21[$parent.$parent.$index][3][1][1].length >= 1 && subCheck[1][1] === 'c'" class="animate-if form-sub-section"> 
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}<span class="select-all" translate="global.messages.selectAll"></span>
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="checkbox"
+														 ng-model="$parent.listA21[$parent.$parent.$parent.$index][3][1][1][1][$index][1]"
+														 ng-value="subCheck"
+														 ng-click="changeA('A212CSub', $parent.listA21[$parent.$parent.$parent.$index][3][1][1][1][$index][1], $index, $parent.$index, 'c')"
+														 name="subCheck{{$parent.$parent.$index}}{{check.subCheck2Type}}1" class="form-radio-buttons" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Radio Buttons for subSub Check 2's (Third Level) -->
+						<div ng-if="$parent.$parent.listA21[$parent.$parent.$index][3][1][0] === subCheck[0] && subCheck[1][1] === 'r'" class="animate-if form-sub-section"> <!--if statement -                             -->
+							<div class="form-sub-sub-section">
+								<div class="form-input-label">
+									{{subCheck[1][0]}}
+								</div>
+								<div class="form-input form-radio-button-input" ng-repeat="subSubCheck in subCheck[1][2]">
+									<div class="form-radio-buttons-container">
+										<div class="form-radio-button">
+											<input type="radio"
+														 ng-model="$parent.listA21[$parent.$parent.$parent.$index][3][1][1][1][0]"
+														 ng-value="subSubCheck[0]"
+														 ng-click="changeA('A211RSub', $parent.listA21[$parent.$parent.$parent.$index][3][1][1][1][0], $index, $parent.$parent.$parent.$index, subCheck[1])"
+														 name="subCheck{{$parent.$parent.$index}}{{check.subCheck2Type}}1" class="form-radio-buttons form-element-required" />
+											<div class="form-radio-check"></div>
+										</div>
+										<div class="form-radio-label">
+											{{subSubCheck[0]}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,395 @@
+//Header Styles	
+	.header {
+		border-bottom: 4px solid $primary-color;
+		padding: 10px 0px 20px 0px;
+		background-color: #fff;
+		@include breakpoint(sm2) {
+			padding: 5px 0px 10px 0px;
+			position: relative;
+			width: 100%;
+			top:0;
+			left:0;
+			z-index: 100;
+		}
+		#header-left {
+			text-align: left;
+			padding-top: 10px;
+			@include breakpoint(sm2) {
+				padding-top: 5px;
+			}
+			a {
+				cursor:pointer;
+			}
+			img {
+				max-width: 120px;
+				display:inline-block;
+				@include breakpoint(sm2) {
+					max-width: 70px;
+				}
+			}
+		}
+		#header-right {
+			#header-top-right {
+				text-align:right;
+				#language-select {
+					&:before {
+						content: "";
+						background-image: url(/assets/angular/images/language-icon.png);
+						background-size: 20px 20px;
+						background-position: center;
+						position: relative;
+						display: inline-block;
+						height: 20px;
+						width: 20px;
+						vertical-align: top;
+					}
+					select {
+						display: inline-block;
+						vertical-align: middle;
+						border: 2px solid #939598;
+						background-color: #FFFEFC;
+						border-radius: 4px;
+						padding: 2px;
+						color: #004b8d;
+						cursor: pointer;
+						font-size: 8pt;
+						max-width: 100%;
+					}
+				}
+			}
+			#header-bottom-right {
+				margin-top: 20px;
+				text-align:right;
+				@include breakpoint(sm2) {
+					text-align:right;
+					margin-top: 13px;
+					margin-right: 20px;
+				}
+			}
+			i {
+				font-size: 24pt;
+				@include breakpoint(sm2) {
+					font-size: 18pt;
+				}
+			}
+			#main-navigation {
+				text-align:right;
+				display:inline-block;
+				@include breakpoint(sm2) {
+					display:none;
+				}
+				> ul {
+					list-style-type:none;
+					padding-left: 0px;
+					> li {
+						display:inline-block;
+						vertical-align:bottom;
+						padding: 20px 0px;
+						&:last-child {
+							> a {
+								padding-right: 0px;
+							}
+						}
+						> a {
+							padding: 20px;
+							text-transform: uppercase;
+							text-decoration:none;
+							font-weight: bold;
+							cursor:pointer;
+							@include breakpoint(md) {
+								padding: 20px 15px;
+								font-size: 10pt;
+							}
+							&:hover {
+								color:$secondary-color;
+							}
+						}
+					}
+					li.menu-item {
+						> a {
+							position:relative;
+							&:before {
+								font-family: FontAwesome;
+								font-style: normal;
+								font-weight: normal;
+								text-decoration: inherit;
+								font-size:12pt;
+								position: relative;
+								margin-right:8px;
+							}
+						}
+						ul.sub-menu {
+							position:absolute;
+							list-style-type:none;
+							padding-left:0px;
+							bottom:0px;
+							background-color:#fff;
+							border: 2px solid $primary-color;
+							width: 160px;
+							bottom:-75px;
+							left:0;
+							display:none;
+							text-align: left;
+							z-index: 2000;
+							border-radius: 2px;
+							&.active {
+								display:block!important;
+							}
+							> li {
+								position:relative;
+								> a {
+									display:block;
+									padding:10px;
+									font-weight: 500;
+									&:hover {
+										text-decoration:none;
+										background-color: #939598;
+										color: #fff;
+									}
+								}
+							}
+							ul.sub-sub-menu {
+								position:absolute;
+								list-style-type:none;
+								padding-left:0px;
+								bottom:0px;
+								background-color:#fff;
+								border: 2px solid $primary-color;
+								width: 160px;
+								bottom:-75px;
+								left:0;
+								text-align: left;
+								z-index: 2000;
+								border-radius: 2px;
+								&.active {
+									display:block!important;
+								}
+								> li {
+									> a {
+										display:block;
+										padding:10px;
+										font-weight: 500;
+										&:hover {
+											text-decoration:none;
+											background-color: #939598;
+											color: #fff;
+										}
+									}
+								}
+							}
+						}
+						&:hover {
+							ul.sub-menu {
+								display:block;
+							}
+						}
+					}
+					li.menu-item-home > a {
+						&:before {
+							content: "\f015";
+						}
+					}
+					li.menu-item-help {
+						> a {
+							&:before {
+								content: "\f059";
+							}
+						}
+						ul.sub-menu {
+							left:auto;
+							right:0;
+						}
+					}
+					li.menu-item-notices > a {
+						&:before {
+							content: "\f0f3";
+						}
+						#notice-count {
+							display:none;
+							&.notice-count-load {
+								display:inline-block;
+							}
+						}
+					}
+					li.menu-item-principles a {
+						&:before {
+							content: "";
+							background-image: url("/assets/angular/images/9gp-mini_logo.png");
+							background-size:20px 20px;
+							background-position:center;
+							position: relative;
+							margin-right: 8px;
+							display: inline-block;
+							height: 20px;
+							width: 20px;
+							vertical-align: top;
+							@include breakpoint(md) {
+								background-size:18px 18px;
+								height: 18px;
+								width: 18px;
+							}
+						}
+						&:hover {
+							&:before {
+								background-image: url("/assets/angular/images/9gp-mini_logo_hover.png");
+							}
+						}
+					}
+				}
+			}
+			#mobile-menu-button {
+				@include breakpoint(md2) {
+					display:none;
+				}
+				@include breakpoint(sm2) {
+					display:inline-block;
+				}
+			}
+		}
+		#mobile-menu {
+			display:none;
+			@include breakpoint(md2) {
+				display:none;
+			}
+			&.mobile-menu-load {
+				display:block;
+			}
+		}
+		li a {
+			cursor:pointer;
+		}
+		&#admin-header {
+			background-color:$primary-color;
+			border-bottom: 4px solid $secondary-color;
+			.col-xs-7 {
+				@include breakpoint(xs) {
+					padding-right:0px;
+				}
+			}
+			#header-left {
+				h1 {
+					display: inline-block;
+					color: #fff;
+					margin-bottom: 0px;
+					vertical-align: middle;
+					margin-left: 30px;
+					font-size: 24pt;
+					@include breakpoint(sm) {
+						font-size: 18pt;
+						margin-left: 20px;
+					}
+					@include breakpoint(xs) {
+						font-size: 14pt;
+						margin-left: 15px;
+					}
+					@include breakpoint(xxs) {
+						font-size: 12pt;
+						margin-left: 5px;
+					}
+				}
+			}
+			#header-right {
+				#header-top-right {
+					text-align:right;
+					#language-select {
+						&:before {
+							background-image: url(/assets/angular/images/language-icon_white.png);
+						}
+						select {
+							border: 2px solid #939598;
+							background-color: #FFFEFC;
+							color: #004b8d;
+						}
+					}
+				}
+				#header-bottom-right {
+					margin-top: 20px;
+					@include breakpoint(sm2) {
+						text-align:right;
+						margin-top: 13px;
+						margin-right: 20px;
+					}
+				}
+				i {
+					font-size: 24pt;
+					@include breakpoint(sm2) {
+						font-size: 18pt;
+					}
+				}
+				#main-navigation {
+					text-align:right;
+					@include breakpoint(sm2) {
+						display:none;
+					}
+					> ul {
+						list-style-type:none;
+						padding-left: 0px;
+						> li {
+							display:inline-block;
+							vertical-align:bottom;
+							padding: 20px 0px;
+							&:last-child {
+								> a {
+									padding-right: 0px;
+								}
+							}
+							> a {
+								padding: 20px;
+								text-transform: uppercase;
+								text-decoration:none;
+								font-weight: bold;
+								cursor:pointer;
+								color:#fff;
+								@include breakpoint(md) {
+									padding: 20px 15px;
+									font-size: 10pt;
+								}
+								&:hover {
+									color:$secondary-color;
+								}
+							}
+						}
+						li a.menu-item-principles {
+							&:before {
+								content: "";
+								background-image: url("/assets/angular/images/9gp-mini_logo_white.png");
+								background-size:20px 20px;
+								background-position:center;
+								position: relative;
+								margin-right: 8px;
+								display: inline-block;
+								height: 20px;
+								width: 20px;
+								vertical-align: top;
+								@include breakpoint(md) {
+									background-size:18px 18px;
+									height: 18px;
+									width: 18px;
+								}
+							}
+							&:hover {
+								&:before {
+									background-image: url("/assets/angular/images/9gp-mini_logo_hover.png");
+								}
+							}
+						}
+					}
+				}
+			}
+			#mobile-menu-button {
+				a {
+					color:#fff;
+				}
+			}
+		}
+		&#mobile-header {
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			display:none;
+			@include breakpoint(sm2) {
+				display:block;
+			}
+		}
+	}

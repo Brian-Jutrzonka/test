@@ -1,0 +1,232 @@
+<div class="container ng-scope">
+	<div class="row debug">
+		<div id="dashboard-content">
+
+			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebarLeft" role="navigation">
+				<div class="well sidebar-nav sidebar-nav-top">
+					<ul class="nav">
+					<li class="form-input">
+					<select id="location_select" name="location">
+					<option value="*">All Sites</option><option value="401">Abu Dhabi</option><option value="7">Antigo</option><option value="390">Baton Rouge</option><option value="402">Beijing</option><option value="62">Cook UAE</option><option value="391">Cypress</option><option value="392">Denver</option><option value="14">Ellesmere Port</option><option value="24">Glasgow</option><option value="393">Grand Junction</option><option value="11">Guaymas</option><option value="13">Houston (DPO)</option><option value="12">Jeffersonville</option><option value="394">Knoxville</option><option value="395">La Porte</option><option value="61">Mexico</option><option value="18">MFS</option><option value="63">Odessa</option><option value="396">Oklahoma City</option><option value="16">Pewaukee</option><option value="15">Rickmansworth</option><option value="9">Rock Island</option><option value="403">Russia</option><option value="10">Suzhou</option><option value="398">The Woodlands</option><option value="397">Tulsa</option><option value="399">Tyler, TX</option><option value="400">Van Vleck, TX</option><option value="17">Worthing</option>
+					</select>
+					</li>
+					</ul>
+					
+					<ul class="nav">
+					<li><a href="admin/dashboard.html" translate="{{'admin.global.dashboard' | translate}}"></a></li><li><a href="admin/safetyaudit.html" translate="{{'home.routes.safetyAudit.title' | translate}}"></a></li><li><a href="admin/unsafeact.html" translate="{{'home.routes.unsafeAct.title' | translate}}"></a></li><li><a href="admin/unsafecondition.html" translate="{{'home.routes.unsafeCondition.title' | translate}}"></a></li><li><a href="admin/nearmiss.html" translate="{{'home.routes.nearMiss.title' | translate}}"></a></li><li><a href="admin/safe.html" translate="{{'home.routes.somethingSafe.title' | translate}}"></a></li><li><a href="admin/opportunityforimprovement.html" translate="{{'home.routes.opportunityForImprovement.title' | translate}}"></a></li>
+					</ul>
+					
+									</div>
+									<div class="well sidebar-nav sidebar-nav-bottom">
+										<ul class="nav">
+											<li><a href="/admin/login-details.html" translate="admin.profile.loginInfo"></a></li>
+											<li><a href="/admin/password.html" translate="admin.profile.change"></a></li>
+											<li><a href="/goodbye.html?service=logout" translate="global.footer.loginStatus.signOut"></a></li>
+										</ul>
+									</div>
+								</div>
+					
+								<div class="col-xs-12 col-sm-9">
+									<div class="row">
+					<div class="col-12 col-sm-12">
+					<h2 class="ng-cloak">{{'admin.global.dashboard' | translate}} <span class="ng-cloak" style="font-weight:100;color:#999;font-size:3rem"> &bull; All Sites</span></h2>
+					</div>
+					<div class="col-12 col-sm-12">
+					<hr style="margin:0 auto 2rem auto;">
+					</div>
+
+
+
+
+
+					<div class="col-6 col-sm-6 col-lg-6">
+						<h3 translate="admin.global.recentActivity"></h3>
+						<div class="ct-chart ct-golden-section" id="chart1"></div>
+						
+						<script>
+							var chart = new Chartist.Pie('.ct-chart', {
+								series: [20, 10, 30, 40],
+								labels: ["20%", "10%", "30%", "40%"]
+							}, {
+								donut: true,
+								showLabel: true
+							});
+							
+						</script>
+						<p translate="admin.global.reports30"></p>
+						<div class="admin-table">
+						    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table table-striped">
+							<tr>
+<td>Unsafe Acts</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Unsafe Conditions</td>
+<td>82</td>
+</tr>
+<tr>
+<td>Near Misses</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Something Safe</td>
+<td>36</td>
+</tr>
+<tr>
+<td>Opportunities for Improvement</td>
+<td>86</td>
+</tr>
+<tr>
+<td>Safety Audits</td>
+<td>46</td>
+</tr>
+
+                            </table>
+						</div>
+					</div>
+
+					<div class="col-6 col-sm-6 col-lg-6">
+						<h3 translate="admin.global.reportsLatest"></h3>
+						<p translate="admin.global.recentSubmissions"></p>
+						<div class="pre-scrollable admin-table">
+						    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table table-striped">
+					    	<tr>
+<td>Unsafe Acts <small>Rock Island</small></td>
+<td>2018-02-01 23:00</td>
+</tr>
+<tr>
+<td>Unsafe Conditions <small>Rock Island</small></td>
+<td>2018-02-01 23:00</td>
+</tr>
+<tr>
+<td>Near Misses <small>Rock Island</small></td>
+<td>2018-02-01 23:00</td>
+</tr>
+<tr>
+<td>Something Safe <small>Rock Island</small></td>
+<td>2018-02-01 23:00</td>
+</tr>
+<tr>
+<td>Opportunities for Improvement <small>Rock Island</small></td>
+<td>2018-02-01 23:00</td>
+</tr>
+<tr>
+<td>Safety Audits <small>Rock Island</small></td>
+<td>2018-02-01 23:00</td>
+</tr>
+
+                            </table>
+						</div>
+					</div>
+
+<div class="col-12 col-sm-12">
+<hr style="margin:2rem auto;">
+</div>
+
+					<div class="col-12 col-sm-12">
+						<h3 translate="admin.global.appUsage"></h3>
+						<div>
+                            <div id="highchart-usage" style="height:500px;width:100%;"></div>
+                        </div>
+					</div>
+
+
+
+				</div><!-- /.row -->
+
+			</div><!-- /.col -->
+
+		</div><!-- /#content -->
+	</div><!-- /.row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="profile-content" class="form-content">
+				<h1>
+						Profile
+				</h1>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						Username
+					</div>
+					<div class="form-input">
+						<input type="text"/>
+					</div>
+				</div>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						First Name
+					</div>
+					<div class="form-input unsafe-form-input">
+						<input type="text"/>
+					</div>
+				</div>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						Last Name
+					</div>
+					<div class="form-input unsafe-form-input">
+						<input type="text"/>
+					</div>
+				</div>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						Email
+					</div>
+					<div class="form-input unsafe-form-input">
+						<input type="text"/>
+					</div>
+				</div>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						Job Title
+					</div>
+					<div class="form-input unsafe-form-input">
+						<input type="text"/>
+					</div>
+				</div>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						Change Password?
+					</div>
+					<div class="form-input unsafe-form-input">
+						<input type="password"/>
+					</div>
+				</div>
+				<div class="profile-input-section">
+					<div class="profile-input-label">
+						Change Password Confirmation
+					</div>
+					<div class="form-input">
+						<input type="password"/>
+					</div>
+				</div>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="submit-button">
+						<form id="profile-form" class="submit-form" action="" method="post">
+							<input type="hidden" id="form-change-user-1" value=""/>
+							<input type="hidden" id="form-change-user-2" value=""/>
+							<input type="hidden" id="form-change-user-3" value=""/>
+							<input type="hidden" id="form-change-user-4" value=""/>
+							<input type="submit" name="Submit" value="Change Profile"/>
+						</form>   						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->

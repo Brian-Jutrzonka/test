@@ -1,0 +1,115 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="submit-content" class="form-content">
+				<h1 id="form-heading" translate="global.submit.title"></h1>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.location"></div>
+          <div class="form-input-submit-text">
+						<p>
+							{{listL11N}}
+						</p>
+          </div>
+        </div>
+        <div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.area"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL12}}
+						</p>
+					</div>
+				</div>
+        <div class="form-input-submit-section" ng-if="listL12 === 'Other'">
+					<div class="form-input-submit-label" translate="global.location.other"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL1O}}
+						</p>
+					</div>
+				</div>
+        <div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.name"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL1N}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="nearMiss.page2.description.title"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA31}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.baseFreeform.severity"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA3R}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="nearMiss.page2.beforePhotos.title"></div>
+					<div class="form-input-submit-text">
+						<div class="form-input-submit-text">
+							<div class="dropzone-preview" ng-repeat="file in dropzoneThumb[0] track by $index">
+								<img class="dropzone-file-image" ng-src="{{file}}" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="nearMiss.page2.corrective.title"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA33}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="nearMiss.page2.afterPhotos.title"></div>
+					<div class="form-input-submit-text">
+						<div class="form-input-submit-text">
+							<div class="dropzone-preview" ng-repeat="file in dropzoneThumb[1] track by $index">
+								<img class="dropzone-file-image" ng-src="{{file}}" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.submit.subtitles.email"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA351}}
+						</p>
+					</div>
+				</div>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="blue-button">
+						<a href="/#/near-miss/edit" translate="global.buttons.editButton"></a>
+					</div>
+					<div class="dover-buttons" id="submit-button">
+						<form id="submit-form" class="submit-form" action="/submit-report.html" method="post">
+							<input type="hidden" name="routeName" id="routeName" value=""/>
+							<input type="hidden" name="listL11" id="listL11" value=""/>
+							<input type="hidden" name="listL12" id="listL12" value=""/>
+							<input type="hidden" name="listL1N" id="listL1N" value=""/>
+							<input type="hidden" name="otherArea" id="otherArea" value=""/>
+							<input type="hidden" name="listA31" id="listA31" value=""/>
+							<input type="hidden" name="listA3R" id="listA3R" value=""/>
+							<input type="hidden" name="listA32[]" id="listA32" value=""/>
+							<input type="hidden" name="listA33" id="listA33" value=""/>
+							<input type="hidden" name="listA34[]" id="listA34" value=""/>
+							<input type="hidden" name="listA35" id="listA35" value=""/>
+							<input ng-click="submitRoute()" type="submit" name="Submit"  value="{{ 'global.buttons.submitButton' | translate }}"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<tour></tour>

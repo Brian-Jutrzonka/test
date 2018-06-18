@@ -1,0 +1,923 @@
+//Styles that are used globally across the application
+
+//Font Add-ins
+	@font-face {
+	font-family: 'HelveticaNeueLTStd';
+	src: url(/assets/angular/fonts/HelveticaNeueLTStd-Lt.otf),
+	url(/assets/angular/fonts/HelveticaNeueLTStd-Lt.otf) format('truetype');
+	}
+	@font-face {
+		font-family: "HelveticaNeueLTStd";
+		src: url(/assets/angular/fonts/HelveticaNeueLTStd-Bd.otf),
+		url(/assets/angular/fonts/HelveticaNeueLTStd-Bd.otf) format('truetype');
+		font-weight: bold;
+	}
+	
+// Variable Declarations
+	$primary-color: #004b8d;
+	$secondary-color: #939598;
+	$main-background-color:#fff;
+	$red-color:#C8002F;
+	$green-color:#00935B;
+	$purple-color:#2D009C;
+	$primary-font: 'Montserrat', Helvetica, Arial, sans-serif;
+	$heading-font: 'Montserrat', Helvetica, Arial, sans-serif;
+	$base-font-size:12pt;
+
+// Mixin Declarations
+	@mixin home-button($color) {
+		background-color:$color;
+		color:#fff;
+		border: 2px solid $color;
+		&:hover {
+			background-color:#fff;
+			border:2px solid $color;
+			color:$color;
+			text-decoration:none;
+			+ .tooltip-container {
+				background-color: $color;
+				color:#fff;
+				overflow-y: hidden;
+				max-height: 500px;
+				opacity: 1;
+			}
+		}
+		+ .tooltip-container {
+			color:#fff;
+			opacity: 0;
+			&:hover {
+				background-color: #fff;
+				color:$color;
+				cursor:help;
+				max-height: 500px;
+				opacity: 1;
+			}
+		}
+	}
+	@mixin button($color) {
+		a {
+			border:2px solid $color;
+			color:$color;
+			&:hover {
+				background-color:$color;
+				color:#fff;
+			}
+		}
+	}
+	@mixin form-element() {
+		border: 2px solid #939598;
+		background-color: #FFFEFC;
+		border-radius: 4px;
+		padding: 5px;
+		color:$primary-color;
+}
+
+// Beginning of Body Styles
+	body {
+		font-family: $primary-font;
+		font-weight:400;
+		font-size:$base-font-size;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		line-height: 1.42857143;
+		color: #231f20;
+		background-color: $main-background-color;
+		&.tour-active:before {
+			content:"";
+			display:block;
+			position:absolute;
+			z-index:1000;
+			visibility: visible;
+			background:transparent;
+			height:100vh;
+			width:100%;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6	{
+		font-family: $heading-font;
+		font-weight:400;
+		color: $primary-color;
+		line-height:1.2;
+		margin-top:0px;
+		letter-spacing: 1px;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		font-weight:900;
+	}
+	h1 {
+		font-size: 40pt;
+		margin-bottom: 30px;
+		@include breakpoint(sm2) {
+			font-size: 30pt;
+		}
+		@include breakpoint(xxs) {
+			font-size: 26pt;
+		}
+	}
+	h2 {
+		font-size: 32pt;
+		margin-bottom: 20px;
+		@include breakpoint(sm2) {
+			font-size: 26pt;
+		}
+		@include breakpoint(xxs) {
+			font-size: 22pt;
+		}
+	}
+	h3 {
+		font-size: 24pt;
+    margin-bottom: 20px;
+		@include breakpoint(sm2) {
+			font-size: 20pt;
+		}
+		@include breakpoint(xxs) {
+			font-size: 16pt;
+		}
+	}
+	h4 {
+		font-size: 18pt;
+		margin-bottom: 20px;
+		@include breakpoint(sm2) {
+			font-size: 14pt;
+		}
+		@include breakpoint(xxs) {
+			font-size: 11pt;
+		}
+	}
+	h5 {
+		font-size: 14pt;
+		margin-bottom: 10px;
+		@include breakpoint(sm2) {
+			font-size: 12pt;
+		}
+		@include breakpoint(xxs) {
+			font-size: 8pt;
+		}
+	}
+	h6 {
+		font-size: 12pt;
+	}
+	p {
+		margin: 0 0 10px;
+	}
+	ul,
+	ol {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	ul ul,
+	ol ul,
+	ul ol,
+	ol ol {
+		margin-bottom: 0;
+	}
+	a	{
+		color:$primary-color;
+		&:hover {
+			color:$secondary-color;
+			text-decoration:none;
+		}
+		&:active, &:focus {
+			outline: none!important;
+			text-decoration:none;
+		}
+	}
+	img {
+		vertical-align: middle;
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	form {
+		margin:0px;
+	}
+	//Preloads image hover for background-image hovers
+	body:after{
+		display:none;
+		content: url(/assets/angular/images/9gp-mini_logo_hover.png);
+	 }
+	 
+//Angular Specific Styles
+
+	//Animations
+	.animate-if.ng-enter {
+		-webkit-transition: max-height 1.3s, max-width .5s, opacity .7s;
+		-moz-transition: max-height 1.3s, max-width .5s, opacity .7s;
+		transition:  max-height 1.3s, max-width .5s, opacity .7s;
+	}
+	.animate-if.ng-leave {
+		-webkit-transition: all .4s;
+		-moz-transition: all .4s;
+		transition: all .4s;
+	}
+	.animate-if.ng-enter,
+	.animate-if.ng-leave.ng-leave-active {
+		max-height:0;
+		max-width:0;
+		opacity:0;
+	}
+	.animate-if.ng-leave,
+	.animate-if.ng-enter.ng-enter-active {
+		max-height: 1000px;
+		max-width:500px;
+		opacity:1;
+	}
+	.animate-view.ng-enter {
+		-webkit-transition: opacity .3s ease;
+		-moz-transition: opacity .3s ease;
+		transition:  opacity .3s ease;
+	}
+	.animate-view.ng-leave {
+		-webkit-transition: opacity 0s ease;
+		-moz-transition: opacity 0s ease;
+		transition: opacity 0s ease;
+	}
+	.animate-view.ng-enter,
+	.animate-view.ng-leave.ng-leave-active {
+		opacity:0;
+	}
+	.animate-view.ng-leave,
+	.animate-view.ng-enter.ng-enter-active {
+		opacity:1;
+	}
+	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+		display: none !important;
+	}
+	
+	
+// ScrollMagic specific
+	sm-class-toggle, sm-scene {
+		@include breakpoint(sm2) {
+			display:none;
+		}
+	}
+
+//Main App Styles - Contains styles from across the application and is used throughout it.  Be careful when changing these, as it will effect things in multiple places.
+	.route-debug {
+		display:none!important;
+	}
+	.main-container {
+		padding:60px 0px;
+		position:relative;
+    overflow: hidden;
+		@include breakpoint(sm) {
+			padding:60px 0px 40px 0px;
+		}
+		@include breakpoint(xs) {
+			padding:60px 0px 40px 0px;
+		}
+		ul {
+			li {
+				margin-bottom:20px;
+				&:last-child {
+					margin-bottom:0px;
+				}
+			}
+		}
+		.form-content {
+			text-align:center;
+	    position: relative;
+			.form-heading, #form-heading {
+				display: inline-block;
+			}
+		}
+		#dover-dots-top {
+			position:absolute;
+			width:100%;
+			max-width: 755px;
+			height: 425px;
+			top:0;
+			right:0px;
+			z-index: -1;
+			background-image: url('/assets/angular/images/background-dots-top.png');
+			background-position:center;
+			background-repeat: no-repeat;
+			opacity:.5;
+		}
+		#dover-dots-bottom {
+			position:absolute;
+			width:100%;
+			max-width: 755px;
+			height: 425px;
+			bottom:0;
+			left:0px;
+			z-index: -1;
+			background-image: url('/assets/angular/images/background-dots-bottom.png');
+			background-position:center;
+			background-repeat: no-repeat;
+			opacity:.5;
+		}
+		.form-required {
+			color:#FF2419;
+		}
+		.select-all {
+			font-size: 8pt;
+			display: block;
+		}
+		.errors-container  {
+			color: #e03c31;
+			font-weight: bold;
+			font-size: 16pt;
+			&.errors-show {
+				margin-bottom:20px;
+				display:block;
+			}
+		}
+	}
+	
+//Buttons used around the site
+	.dover-buttons-section {
+		text-align:center;
+		padding-top: 15px;
+		.dover-buttons {
+			padding: 10px 0px;
+			display: inline-block;
+			font-weight:bold;
+			a {
+				padding:10px 20px 9px 20px;
+				border-radius:5px;
+				cursor:pointer;
+				&:hover {
+					text-decoration:none;
+				}
+			}
+			&#red-button {
+				@include button($red-color);
+			}
+			&#blue-button {
+				@include button($primary-color);
+			}
+			&#green-button {
+				@include button($green-color);
+			}
+			&#purple-button {
+				@include button($purple-color);
+			}
+		}
+		input[type="submit"] {
+			border:2px solid $primary-color;
+			color:$primary-color;
+			padding:10px 20px;
+			border-radius:5px;
+			cursor:pointer;
+			background-color:#fff;
+			font-weight:bold;
+			&:hover {
+				background-color:$primary-color;
+				color:#fff;
+			}
+		}
+		.submit-form input[type="submit"] {
+			background-color:transparent;
+			border:2px solid green;
+			color:green;
+			padding: 8px 20px;
+			border-radius: 5px;
+			&:hover {
+				background-color:green;
+				color:#fff;
+			}
+		}
+		input[type="button"] {
+			background-color:transparent;
+			border:2px solid $primary-color;
+			color:$primary-color;
+			padding: 8px 20px;
+			border-radius: 5px;
+			&:hover {
+				background-color:$primary-color;
+				color:#fff;
+			}
+		}
+	}
+	
+//Form Element Styling
+	.form-input-label {
+		margin-bottom:15px;
+		font-size:16pt;
+		color:$primary-color;
+		font-weight: 500;
+		@include breakpoint(xs) {
+			margin-bottom:10px;
+			font-size:14pt;
+		}
+		.sub-span {
+			display:block;
+			font-size:.6em;
+		}
+	}
+	.form-input {
+		position: relative;
+		margin-bottom:15px;
+		input {
+			@include form-element();
+		}
+		select {
+			@include form-element();
+			cursor: pointer;
+			max-width: 100%;
+			optgroup {
+				font-weight:bold;
+			}
+		}
+		textarea {
+			@include form-element();
+			max-width: 100%;
+		}
+		&.range-form-input {
+			margin-bottom: 70px;
+			.range-form-input-inner {
+				max-width:480px;
+				margin:0 auto;
+				display:block;
+				position:relative;
+				.range-input {
+					position:relative;
+					z-index:2;
+					-webkit-appearance: none;
+					width: 100%;
+					height: 25px;
+					outline: none;
+					border:none;
+					background-color:transparent;
+					-webkit-transition: .2s;
+					transition: opacity .2s;
+			    cursor: pointer;
+					&::-webkit-slider-thumb {
+						-webkit-appearance: none;
+						appearance: none;
+						width: 25px;
+						height: 25px;
+						background: $primary-color;
+						cursor: pointer;
+						border-radius:50%;
+					}
+					&::-moz-range-thumb {
+						width: 25px;
+						height: 25px;
+						border-radius:50%;
+						background: $primary-color;
+						cursor: pointer;
+					}
+				}
+				.range-form-input-h-line {
+					position:absolute;
+					left:0;
+					top:40%;
+					width:100%;
+					height:5px;
+					background-color: #939598;
+					.range-form-input-line {
+						position:absolute;
+						&#range-form-input-line-1 {
+							left:3%;
+							width:30px;
+							height:30px;
+						}
+						&#range-form-input-line-2 {
+							left:26%;
+						}
+						&#range-form-input-line-3 {
+							left:49.7%;
+						}
+						&#range-form-input-line-4 {
+							right:27.3%;
+						}
+						&#range-form-input-line-5 {
+							right	: 4.1%;
+						}
+						.range-form-input-v-line {
+							position: absolute;
+							top: -7.5px;
+							height: 20px;
+							width: 4px;
+							background-color: #939598;
+						}
+						.range-form-input-title {
+							position: absolute;
+							top: 20px;
+							left: -2px;
+							font-weight:600;
+					    color: #004b8d;
+							&.green-text {
+								color:$green-color;
+							}
+							&.yellow-text {
+								color:#d49f00;
+							}
+							&.red-text {
+								color:$red-color;
+							}
+						}
+					}
+				}
+				.range-form-input-key {
+					//display:none;
+					display:inline-block;
+					visibility: hidden;
+					opacity:0;
+					font-weight:600;
+					font-size: .8em;
+					position:absolute;
+					top: 45px;
+					left: -90px;
+					z-index: 2;
+					width: 200px;
+					padding:10px;
+			    background-color: #fff;
+					border: 2px solid $primary-color;
+					transition:all .3s ease-in-out;
+					.range-form-input-key-number {
+						position:absolute;
+					}
+					&.range-form-input-low {
+						color:$green-color;
+						padding-right: 12px;
+					}
+					&.range-form-input-medium {
+						color:#d49f00;
+					}
+					&.range-form-input-high {
+						color:$red-color;
+						padding-left: 12px;
+					}
+					&.active {
+						opacity:1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+		form.dropzone {
+			max-width:481px;
+			margin: 0 auto;
+			margin-bottom: 30px;
+		}
+		&.datetime {
+			max-width: 481px;
+			margin: 0 auto 15px auto;
+			.datetime-text {
+				margin-bottom: 15px;
+				font-weight: 600;
+			}
+			.datetime-link {
+				padding: 10px 0px;
+				a {
+					padding: 10px;
+					background-color: #FFFEFC;
+					color: $primary-color;
+					border: 2px solid #939598;
+					text-transform: uppercase;
+					border-radius: 4px;
+					font-weight: 500;
+					font-size:10pt;
+					&:hover {
+						text-decoration:none;
+						background-color: $primary-color;
+						color: #fff;
+						border: 2px solid $primary-color;
+					}
+				}
+			}
+			.datetime-dropdown-menu {
+				margin: 0px;
+				padding: 10px 5px;
+			}
+		}
+	}
+	.form-radio-container {
+		display: inline-block;
+		text-align: left;
+		.form-radio-buttons-container {
+			display: inline-block;
+			vertical-align:middle;
+			position: relative;
+			.form-radio-button {
+				display:inline-block;
+				.form-radio-buttons {
+					position: absolute;
+					width:100%;
+					height: 100%;
+					z-index:100;
+					left:0;
+					opacity: 0;
+					cursor:pointer;
+				}
+				.form-radio-buttons:checked + .form-radio-check:after {
+					content: "\f00c";
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-decoration: inherit;
+					color:$primary-color;
+					font-size:16pt;
+					position: absolute;
+					top: -3px;
+					left: 1px;
+				}
+				.form-radio-check {
+					border:4px solid #e6e6e6;
+					height:30px;
+					width:30px;
+					display:inline-block;
+					vertical-align:middle;
+					margin-right: 10px;
+					position: relative;
+					@include breakpoint(xs) {
+						margin-right: 5px;
+					}
+				}
+			}
+			.form-radio-label {
+				display:inline-block;
+				vertical-align:middle;
+				max-width:320px;
+				@include breakpoint(xs) {
+					font-size: 11pt;
+					max-width:84%;
+				}
+			}
+		}
+		.form-sub-section {
+			padding-left: 20px;
+			margin-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-left: 2px solid $primary-color;
+			@include breakpoint(xs) {
+				padding-left: 10px;
+			}
+			.form-input-label {
+				font-size: 12pt;
+				margin-bottom: 10px;
+				padding-top: 5px;
+				@include breakpoint(xs) {
+					font-size: 11pt;
+				}
+			}
+			.form-radio-label {
+				@include breakpoint(xs) {
+					max-width:72%;
+				}
+			}
+			.form-input {
+				margin-bottom: 5px;
+				margin-left: 10px;
+				@include breakpoint(xs) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	
+//Submit Page
+	#submit-content {
+		.form-input-submit-section {
+			margin-bottom: 20px;
+			@include breakpoint(xxs) {
+				margin-bottom: 10px;
+			}
+			&.form-input-submit-w-sub-section {
+				margin-bottom:5px;
+				@include breakpoint(xxs) {
+					margin-bottom:0px;
+				}
+			}
+			.form-input-submit-label {
+				display: inline-block;
+				vertical-align: middle;
+				font-weight: 500;
+				font-size: 14pt;
+				width: 49%;
+				text-align: right;
+				padding-right: 15px;
+				@include breakpoint(xxs) {
+					font-size:11pt;
+					padding-right: 0px;
+				}
+			}
+			.form-input-submit-text {
+				display: inline-block;
+				vertical-align: middle;
+				font-weight:bold;
+				width: 49%;
+				text-align: left;
+				padding-left: 15px;
+				p {
+					font-weight:300;
+					font-size: 14pt;
+					margin-bottom:0px;
+					@include breakpoint(xxs) {
+						font-size:10pt;
+						padding-left: 5px;
+					}
+				}
+				ul {
+					padding-left:30px;
+					margin-bottom:0px;
+					li {
+						font-weight:300;
+						font-size: 12pt;
+						margin-bottom:0px;
+						@include breakpoint(xxs) {
+							font-size:10pt;
+							padding-left: 5px;
+						}
+					}
+				}
+				h3 {
+					font-size: 16pt;
+					font-weight: 700;
+					margin-bottom: 10px;
+				}
+				h4 {
+					font-size: 14pt;
+					font-weight: 700;
+					margin-bottom: 5px;
+				}
+				h5 {
+					font-size: 12pt;
+					font-weight: 700;
+					margin-bottom: 5px;
+				}
+				.sub-section {
+					padding-left: 10px;
+					margin-left: 10px;
+					border-left: 2px solid #e6e7e8;
+					margin-bottom: 10px;
+					p {
+						font-size:12pt;
+					}
+				}
+				.sub-sub-section {
+					padding-left: 10px;
+					margin-left: 10px;
+					border-left: 2px solid #e6e7e8;
+					margin-bottom: 10px;
+					margin-top: 5px;
+					p {
+						font-size:12pt;
+					}
+				}
+				.submit-safety-audit-areas {
+					margin-bottom:20px;
+				}
+			}
+		}
+		.form-input-submit-sub-section {
+			margin-bottom:20px;
+			@include breakpoint(xxs) {
+				margin-bottom:10px;
+			}
+			.form-input-submit-section {
+				margin-bottom: 0px;
+				.form-input-submit-label {
+					font-size:11pt;
+					@include breakpoint(xxs) {
+						font-size:9pt;
+					}
+				}
+				.form-input-submit-text {
+					p {
+						font-size:11pt;
+						padding-left: 7px;
+						@include breakpoint(xxs) {
+							font-size:9pt;
+						}
+					}
+				}
+				&.form-input-submit-sub-sub-section {
+					.form-input-submit-text {
+						p {
+							padding-left: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+//Thank You Page
+	#submit-report-content {
+		h4 {
+			line-height: 1.6;
+	    font-weight: 700;
+			max-width: 700px;
+			display: inline-block;
+		}
+	}
+
+// Dropzone
+	.dropzone-container {
+		padding-bottom: 30px;
+    color: #939598;
+    text-align: center;
+		position:relative;
+		.dropzone-no-files {
+			max-width: 481px;
+			margin: 0 auto;
+			&.inactive {
+				display:none;
+			}
+			&.active {
+				display:block;
+			}
+		}
+		.dropzone-error {
+			max-width: 481px;
+			margin: 0 auto;
+			color:$red-color;
+	    font-weight: 500;
+			&.inactive {
+				display:none;
+			}
+			&.active {
+				display:block;
+			}
+		}
+		.dropzone-previews {
+			width: 100%;
+			max-width: 481px;
+			display: inline-block;
+			&.loading {
+				.dropzone-no-files {
+					//display:none;
+				}
+				.dropzone-wait {
+					display:block;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.dropzone-wait-container {
+			content:"";
+			height:100vh;
+			width:100%;
+			position:fixed;
+			z-index:0;
+			display:block;
+	    top: 0;
+			left:0;
+			right:0;
+			visibility: hidden;
+			transition: all .3s ease-in-out;
+			&.image-uploading {
+				background-color:rgba(0,0,0,0.8);
+				z-index:2000;
+				visibility: visible;
+			}
+			.dropzone-wait {
+				color: #fff;
+				font-weight: 500;
+				font-size: 1.4em;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 47% !important;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				img {
+					max-width:80px;
+					margin: 0 auto;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.dropzone-preview {
+		position: relative;
+		display:inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    padding: 20px 10px;
+		.success-button {
+			position:absolute;
+			top:5px;
+			left:0;
+	    font-size: 20pt;
+			color:$green-color;
+		}
+		.remove-button {
+			position:absolute;
+			top:5px;
+			right:0;
+	    font-size: 20pt;
+			cursor: pointer;
+			color:$red-color;
+			opacity:0;
+			transition:.3s all ease-in-out;
+			&:hover {
+				color:#b50223;
+			}
+		}
+		.dropzone-file-image {
+			max-width: 130px;
+		}
+		&:hover {
+			.remove-button {
+				opacity:1;
+			}
+		}
+	}
+	 

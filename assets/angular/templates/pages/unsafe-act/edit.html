@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="submit-content" class="form-content">
+				<h1 id="form-heading" class="form-heading" translate="global.submit.title"></h1>
+				<location></location>
+				<div class="form-input-label">
+					<span translate="unsafeAct.page2.title"></span><span class="form-required">*</span>
+				</div>
+				<unsafe-a-2></unsafe-a-2>
+				<unsafe-a-3></unsafe-a-3>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="submit-button"> 
+						<form id="submit-form" class="submit-form" action="/submit-report.html" method="post" ng-click="submitRoute()">
+							<input type="hidden" name="routeName" id="routeName" value=""/>
+							<input type="hidden" name="listL11" id="listL11" value=""/>
+							<input type="hidden" name="listL12" id="listL12" value=""/>
+							<input type="hidden" name="listL1N" id="listL1N" value=""/>
+							<input type="hidden" name="otherArea" id="otherArea" value=""/>
+							<input type="hidden" name="listA21[]" id="listA21" value=""/>
+							<input type="hidden" name="listA31" id="listA31" value=""/>
+							<input type="hidden" name="listA3R" id="listA3R" value=""/>
+							<input type="hidden" name="listA32" id="listA32" value=""/>
+							<input type="hidden" name="listA34" id="listA34" value=""/>
+							<input type="hidden" name="listA35" id="listA35" value=""/>
+							<input type="hidden" name="listA36[]" id="listA36" value=""/>
+							<input ng-click="submitRoute()" type="submit" name="Submit" value="{{'global.buttons.submitButton' | translate}}"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
+<tour></tour>

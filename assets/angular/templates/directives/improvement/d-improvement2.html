@@ -1,0 +1,16 @@
+<div class="directive">
+	<div class="form-radio-container form-radio-container-long">
+		<div class="form-input form-radio-button-input" ng-repeat="check in list">
+			<div class="form-radio-buttons-container">
+				<div class="form-radio-button">
+					<input type="radio" ng-model="$parent.listA21" ng-value="check.checkName" ng-click="changeA('A21', $parent.listA21)" class="form-radio-buttons form-element-required"  />
+					<div class="form-radio-check"></div>
+				</div>
+				<div class="form-radio-label">
+					{{check.checkName}}
+				</div>
+				<div class="route-debug">Name: listA21 <br> Value: {{listA21}}</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<form id="contact-content" class="form-content" action="/feedback-sent.html" method="post">
+				<h1 translate="global.contact.title"></h1>
+				<div class="contact-input-section">
+					<div class="contact-input-label" translate="global.contact.name"></div>
+					<div class="form-input">
+						<input type="text" name="contact-name" id="contact-name" value="" ng-model="contactName" ng-change="changeContact('name', contactName)"/>
+					</div>
+				</div>
+				<div class="contact-input-section">
+					<div class="contact-input-label">
+						<span translate="global.location.location"></span><span class="form-required">*</span>
+					</div>
+					<div class="form-input unsafe-form-input">
+						<select class="form-element-required" name="contact-location" id="contact-location" ng-model="contactLocation" ng-change="changeContact('location', contactLocation)">
+							<option></option>
+							<option ng-repeat="location in locations" ng-if="location.parent === '6'" value="{{location.title}}">{{location.title}}</option>
+						</select>
+						<div class="route-debug">Name: listL11 <br> Value: {{listL11}}</div>
+					</div>
+				</div>
+				<div class="contact-input-section">
+					<div class="contact-input-label">
+						<span translate="global.contact.category"></span><span class="form-required">*</span>
+					</div>
+					<div class="form-input unsafe-form-input">
+						<select class="form-element-required" name="contact-category" id="contact-category" ng-model="contactCategory" ng-change="changeContact('category', contactCategory)">
+							<option></option>
+							<option value="Bug/Issue">Bug/Issue</option>
+							<option value="Idea/Suggestion">Idea/Suggestion</option>
+							<option value="Other">Other</option>
+						</select>
+						<div class="route-debug">Name: listL11 <br> Value: {{listL11}}</div>
+					</div>
+				</div>
+				<div class="contact-input-section">
+					<div class="contact-input-label">
+						<span translate="global.contact.issue"></span><span class="form-required">*</span>
+					</div>
+					<div class="form-input unsafe-form-input">
+						<textarea class="form-element-required" rows="6" name="contact-issue-suggestion" id="contact-issue-suggestion" value="" ng-model="contactComments" ng-change="changeContact('comments', contactComments)"></textarea>
+					</div>
+				</div>
+				<div id="errors" class="errors-container"></div>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="submit-button">
+						<input type="button" ng-click="checkContact()" value="{{'global.buttons.submitButton' | translate}}">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

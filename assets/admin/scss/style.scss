@@ -1,0 +1,157 @@
+@import "variables";
+
+.error{
+	color:$error_color !important;
+}
+.success{
+	color:$success_color !important;
+}
+.warning{
+	color:$warning_color !important;
+}
+
+tr.click-for-details,
+tr.click-for-details:nth-of-type(odd) {
+	cursor:pointer;
+	transition:all 150ms linear;
+	&:hover{
+		background-color:$modx-light-blue !important;
+		color:darken($modx-blue-text,20%);
+	}
+	&.is_closed{
+		opacity:.45;
+	}
+}
+
+
+#ui_dialog_1{
+	position:relative;
+	#ui_dialog_1_content{
+		position:relative;
+		height:100%;
+		div{
+			height:100%;
+		}
+	} // /ui_dialog_1_content
+}// /ui_dialog_1
+
+
+#highcharts-usage {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+}
+
+
+
+table {
+	td,th {
+		&.w5  {  width:5%;   }
+		&.w10 {  width:10%;  }
+		&.w20 {  width:20%;  }
+		&.w30 {  width:30%;  }
+		&.w40 {  width:40%;  }
+		&.w50 {  width:50%;  }
+	}
+
+	td {
+	}
+	td.col_value{
+	}
+	td.col_name{
+	}
+
+	th {
+	}
+
+} // /table
+
+
+img.thumbnails{
+	display:inline;
+	width:130px;
+	height:auto;
+	margin:0 .5em 0 0;
+	vertical-align:center;
+	opacity:.7;
+	transition: opacity 200ms linear;
+	&:hover{
+		opacity:1;
+	}
+}
+ul.audit-list{
+	li{
+		list-style-type:none;
+		li {
+			font-size:1.5rem;
+		}
+	}
+}
+
+iframe{
+	border:none;
+}
+
+.small{
+}
+
+form.highcharts-opts{
+	margin-bottom:1rem;
+	label {
+		font-weight:400;
+		font-size:1.25rem;
+	}
+	button{
+		border:none !important;
+		font-weight:400;
+		font-size:1.25rem;
+		padding:.25rem .75rem !important;
+		vertical-align:middle;
+	}
+}
+
+.report_status__color_indicator{
+	display:inline-block;
+	width:1.5rem;
+	height:1.5rem;
+	border-radius:3rem;
+	vertical-align:middle;
+	background-color:#ccc;
+	&.report_status__color_indicator--red{
+		background-color:#ce0000;
+	}
+	&.report_status__color_indicator--amber{
+		background-color:#ffc700;
+	}
+	&.report_status__color_indicator--green{
+		background-color:#4fbb00;
+	}
+}
+
+body#app-admin.report {
+	.zeroharm-report-table {
+		border-bottom:1px solid #ddd;
+		border:2px solid #ddd;
+		td.col_name {
+			font-weight:500;
+		}
+	}
+	.well {
+		border:2px solid #ddd;
+		padding:15px;
+		h4 {
+			border-bottom: 2px solid #ddd;
+			padding-bottom: 5px;
+		}
+		hr {
+			border-top: 2px solid #ddd;
+		}
+		label {
+			margin-bottom: 0px;
+		}
+		.note {
+			margin-top:10px;
+		}
+	}
+}

@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+			<div id="submit-content" class="form-content">
+				<h1 id="form-heading" translate="global.submit.title"></h1>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.location"></div>
+          <div class="form-input-submit-text">
+						<p>
+							{{listL11N}}
+						</p>
+          </div>
+        </div>
+        <div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.area"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL12}}
+						</p>
+          </div>
+        </div>
+        <div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.name"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL1N}}
+						</p>
+					</div>
+				</div>
+        <div class="form-input-submit-section">
+					<div class="form-input-submit-label"><span translate="global.location.specificArea"></span></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL13}}
+						</p>
+          </div>
+        </div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="safetyAudit.page3.title"></div>
+					<div class="form-input-submit-text">
+						<div class="submit-safety-audit-areas">
+							<h3 translate="safetyAudit.page3.options.applicable"></h3>
+							<div ng-repeat="list in listA21 track by $index" ng-if="list[1] === 'Applicable & Inspected'">
+								<p>
+									{{list[0]}}
+								</p>
+							</div>
+						</div>
+						<div class="submit-safety-audit-areas">
+							<h3 translate="safetyAudit.page3.options.notApplicable"></h3>
+							<div ng-repeat="list in listA21 track by $index" ng-if="list[1] === 'Not Applicable'">
+								<p>
+									{{list[0]}}
+								</p>
+							</div>
+						</div>
+						<div class="submit-safety-audit-areas">
+							<h3 translate="safetyAudit.page3.options.notInspected"></h3>
+							<div ng-repeat="list in listA21 track by $index" ng-if="list[1] === 'Not Inspected'">
+								<p>
+									{{list[0]}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="blue-button">
+						<a href="/#/safety-audit/edit" translate="global.buttons.editButton"></a>
+					</div>
+					<div class="dover-buttons" id="submit-button">
+						<form id="submit-form" class="submit-form" action="/submit-report.html" method="post">
+							<input type="hidden" name="routeName" id="routeName" value=""/>
+							<input type="hidden" name="listL11" id="listL11" value=""/>
+							<input type="hidden" name="listL12" id="listL12" value=""/>
+							<input type="hidden" name="listL1N" id="listL1N" value=""/>
+							<input type="hidden" name="listL13" id="listL13" value=""/>
+							<input type="hidden" name="listA21" id="listA21" value=""/>
+							<input ng-click="submitRoute()" type="submit" name="Submit" value="{{'global.buttons.submitButton' | translate}}"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<tour></tour>

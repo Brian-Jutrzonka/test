@@ -1,0 +1,284 @@
+// Styles specific to the different routes that are within the application
+
+//Safety Audit Pages
+	.safety-audit-2-section {
+		.base-content-container {
+			max-width:800px;
+			margin:0 auto;
+			text-align:left;
+			ol, ul {
+				padding-left: 30px;
+				@include breakpoint(xs) {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+	.safety-audit-container {
+		.safety-audit-3-section {
+			h3 {
+				text-align:center;
+				font-weight: 500;
+				font-size: 22pt;
+		    margin-bottom: 30px;
+				@include breakpoint(xs) {
+					margin-bottom: 15px;
+				}
+				@include breakpoint(xs) {
+					font-size: 19pt;
+				}
+			}
+			textarea {
+				width:100%;
+			}
+			.form-radio-container {
+				.form-radio-buttons-container {
+					margin-bottom: 15px;
+					.form-radio-label {
+						max-width: 435px;
+						@include breakpoint(xs) {
+							max-width: 84%;
+						}
+					}
+				}
+			}
+			.form-input select {	
+				margin: 0 auto;
+				display: block;
+				margin-bottom: 30px;
+			}
+			.safety-audit-input-container {
+				max-width: 481px;
+				margin: 0 auto;
+				display: block;
+				.form-radio-check {
+					border: 4px solid $red-color;
+					&:after {
+						content: "\f00d";
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-decoration: inherit;
+						color: $red-color;
+						font-size: 16pt;
+						position: absolute;
+						top: -3px;
+						left: 3px;
+					}
+				}
+				.form-radio-buttons:checked + .form-radio-check	{
+					border: 4px solid $green-color;
+					&:after {
+						color:$green-color;
+					}
+				}
+			}
+			.safety-audit-checkboxes {
+				padding-bottom: 30px;
+				border-bottom: 2px solid #e6e7e8;
+				margin-bottom: 50px;
+				position:relative;
+				@include breakpoint(sm) {
+					padding-bottom: 20px;
+					margin-bottom: 40px;
+				}
+				@include breakpoint(xs) {
+					padding-bottom: 15px;
+					margin-bottom: 35px;
+				}
+				&:last-child {
+					border-bottom: none;
+			    margin-bottom: 0px;
+				}
+				.safety-audit-anchor-links {
+					position:absolute;
+					top:-40px;
+					@include breakpoint(sm) {
+						top:-120px;
+					}
+					@include breakpoint(xs) {
+						top:-110px;
+					}
+				}
+			}
+			.safety-audit-main-radio {
+				text-align: center;
+				.safety-audit-main-radio-inner {
+					@include breakpoint(xs) {
+						max-width: 240px;
+						text-align: left;
+						display: inline-block;
+					}
+					.form-radio-buttons-container {
+						margin-bottom: 10px;
+						margin-right: 10px;
+						&:first-child .form-radio-button .form-radio-buttons:checked + .form-radio-check {
+							border-color:$green-color;
+							&:after {
+								color:$green-color;
+							}
+						}
+						&:nth-child(2) .form-radio-button .form-radio-buttons:checked + .form-radio-check {
+							border-color:$purple-color;
+							&:after {
+								color:$purple-color;
+								content: "\f00d";
+								left: 3px;
+							}
+						}
+						&:last-child .form-radio-button .form-radio-buttons:checked + .form-radio-check {
+							border-color:$red-color;
+							&:after {
+								color:$red-color;
+								content: "\f00d";
+								left: 3px;
+							}
+						}
+						.form-radio-check {
+							margin-right:5px;
+						}
+						.form-radio-label {
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+	}
+	#safety-audit-menu-trigger {
+		position:absolute;
+		top:60px;
+	}
+	#safety-audit-menu {
+		position:absolute;
+		top:60px;
+		left:auto;
+		right: 10px;
+		padding:10px 0px;
+		max-width: 240px;
+		border-radius: 0px 0px 2px 2px;
+		max-width: 220px;
+		@include breakpoint(sm2) {
+			background-color: #fff;
+			border: 2px solid #004b8d;
+			border-radius: 4px;
+			right: -220px;
+		}
+		@include breakpoint(sm) {
+			top:150px!important;
+		}
+		&.active {
+			right: 10px;
+			#safety-audit-menu-button {
+				display:none;
+			}
+			#safety-audit-menu-close {
+				@include breakpoint(sm2) {
+					display:block;
+				}
+			}
+		}
+		&.fixed {
+			position:fixed;
+			top:80px;
+			@include breakpoint(xs) {
+				top:100px;
+			}
+		}
+		&.mobile {
+			@include breakpoint(sm2) {
+				position:fixed;
+				top:100px;
+			}
+		}
+		#safety-audit-menu-button {
+			position:absolute;
+			left: -45px;
+			top: -2px;
+			height: 40px;
+			width: 46px;
+			@include breakpoint(md2) {
+				display:none;
+			}
+			#safety-audit-menu-button-link {
+				cursor:pointer;
+				display:block;
+				height:100%;
+				background-color: #fff;
+				border: 2px solid $primary-color;
+				border-radius: 5px 0px 0px 5px;
+				i {
+					font-size: 18pt;
+					margin-left: 12px;
+					margin-top: 5px;
+				}
+			}
+		}
+		#safety-audit-menu-title {
+			font-size:18pt;
+			font-weight:700;
+			color:$primary-color;
+			text-align:right;
+			margin-bottom: 10px;
+			margin-right: 10px;
+			@include breakpoint(sm2) {
+				text-align: center;
+			}
+		}
+		.safety-audit-menu-link {
+			display: inline-block;
+			vertical-align: middle;
+			display:block;
+			font-size: 10pt;
+			cursor:pointer;
+			text-align: right;
+			a {
+				text-decoration:none;
+			}
+			.safety-audit-menu-link-text {
+				display: inline-block;
+				vertical-align: middle;
+				width: 75%;
+			}
+			.safety-audit-menu-check {
+				display: inline-block;
+				vertical-align: middle;
+				width: 15%;
+				.safety-audit-menu-check-yn {
+					border: 3px solid #e6e6e6;
+					height: 20px;
+					width: 20px;
+					border-radius:50%;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+					margin-left: 5px;
+					position: relative;
+					&.applic {
+						background-color: $green-color;
+					}
+					&.notap {
+						background-color: $purple-color;
+					}
+					&.notin {
+						background-color: $red-color;
+					}
+				}
+			}
+		}
+		.safety-audit-menu-option {
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom:0px;
+			}
+		}
+		#safety-audit-menu-close {
+			display:none;
+			position:absolute;
+			top: 5px;
+			right: 7px;
+			font-size: 16pt;
+			cursor:pointer;
+			color:$primary-color;
+		}
+	}

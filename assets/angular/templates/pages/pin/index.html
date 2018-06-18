@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="pin-content" class="form-content">
+				<div class="form-input">
+					<h1>
+						Enter your Employee Number
+					</h1>
+					<!--<input type="hidden" ng-model="listUser" ng-init="userName"/>-->
+					<div class="form-input-label">
+						Employee Number
+					</div>
+					<div class="form-input">
+						<input type="password" ng-model="listUser" ng-change="changeUP('P', listUser)" autocomplete="off" ng-enter="checkPin()"/>
+					</div>
+				</div>
+				<!--<div class="form-input" ng-if="loggedIn === false">
+					<h1>
+						Enter your User Name and Employee Number
+					</h1>
+					<div class="form-input-label">
+						User Name
+					</div>
+					<div class="form-input">
+						<input type="text" name="name" class="name-pin" ng-model="listUser" ng-change="changeUP('U', listUser)" />
+					</div>
+					<div class="form-input-label">
+						Employee Number
+					</div>
+					<div class="form-input">
+						<input type="password" name="pin" class="pin-pin" ng-model="listPass" ng-change="changeUP('P', listPass)" autocomplete="off" />
+					</div>
+				</div>-->
+				<div id="errors" class="errors-container"></div>
+			</div>
+			<div class="dover-buttons-section">
+				<div class="dover-buttons" id="green-button">
+					<a ng-click="checkPin()">Continue</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

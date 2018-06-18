@@ -1,0 +1,808 @@
+{
+	"global": {
+		"header": {
+			"home": "Casa",
+			"notices": "Noticias",
+			"guidingPrinciples": "Principios que nos guian",
+			"faq": "FAQ",
+			"language": "Idioma",
+			"tour": "Gira"
+		},
+		"footer": {
+			"contact": {
+				"title": "¿Necesitas ayuda?",
+				"button": "<i class='fa fa-envelope'></i> Contáctenos",
+				"developed": "Desarrollado por Norman Design"
+			},
+			"loginStatus": {
+				"loggedIn": "Conectado como:",
+				"signOut": "<i class='fa fa-sign-out'></i> Desconectar"
+			}
+		},
+		"validation": {
+			"message": "*Por favor complete todos los campos requeridos"
+		},
+		"alert": {
+			"leaveForm": "Al dejar este formulario, se borrará todo progreso. ¿Quieres continuar?"
+		},
+		"uploadPhotos": {
+			"title": "Foto(s)",
+			"button": "Añadir foto",
+			"max": "(Max: 5)",
+			"messageTitle": "Imagenes subidas",
+			"messageNone": "No hay archivos cargados. <br> Para cargar un archivo, da click o arrastra el archivo en el boton Añadir foto: de arriba.",
+			"messageLoading": "Su imagen se esta cargando, por favor espere.",
+			"error": "Hubo un error al cargar sus fotos. Por favor, inténtelo de nuevo más tarde."
+		},
+		"baseFreeform": {
+			"what": "Que sucedio?",
+			"severity": "Gravedad",
+			"when": {
+				"title": "Cuando sucedio?",
+				"button": "Elegir otra fecha/hora"
+			},
+			"why": "Porque sucedio? ",
+			"suggestions": "Sugerencias para resolver el problema"
+		},
+		"location": {
+			"title": "Donde estas?",
+			"location":"Locacion",
+			"name": "¿Quién eres tú?",
+			"other": "¿Dónde estás?",
+			"area": "Area de la planta",
+			"areaPlaceholder": "Seleccionar ubicación primero",
+			"specificArea": "Área específica evaluada",
+			"optional": "(Opcional)",
+			"uk": "(No disponible para su uso en el U.K.)"
+		},
+		"buttons": {
+			"continueButton": "Continuar",
+			"backButton": "Atras",
+			"editButton": "Editar",
+			"submitButton": "Enviar"
+		},
+		"submit": {
+			"title": "Porfavor revisar",
+			"subtitles": {
+				"location": "Locacion",
+				"area": "Area del problema",
+				"email": "Correo?",
+				"photos": "Foto(s)",
+				"observed": "Que fue observado?"
+			}
+		},
+		"thankYou": {
+			"title": "Gracias",
+			"subTitle": {
+				"s1": "Su envío nos ayuda a prevenir incidentes futuros.",
+				"s2": "Su presentación es un indicador adelantado, lo que significa que podemos evaluar, evaluar y aprender de dónde puede venir el siguiente incidente y prevenirlo.",
+				"s3": "Tu envío agrega valor. Usted está hablando y caminando.",
+				"s4": "Su envío nos ayuda a contar el futuro a través de indicadores principales."
+			},
+			"homeButton": "Casa"
+		},
+		"messages": {
+			"selectAll": "(Seleccione todas las que apliquen)"
+		},
+		"contact": {
+			"title": "Contacto",
+			"name": "Nombre",
+			"issue": "Problema o sugerencia",
+			"category": "¿De qué le gustaría contactarnos?"
+		},
+		"nineGuidingPrinciples": {
+			"title": "9 Principios que nos guian para Cero Daños",
+			"principles": {
+				"a1": "No hay trabajo o tarea tan importante por la que tengamos que comprometer la seguridad de nuestros empleados.",
+				"a2": "El desempeño en seguridad y desempeño en nuestro trabajo ofrece la entrega de productos de calidad a nuestros clientes",
+				"a3": "A través de la forma en que trabajamos y nos comportamos nuestros empleados y partes interesadas estarán protegidos de peligros y riesgos de alguna lesión o enfermedad laboral.",
+				"a4": "Las reglas de seguridad están establecidas por una razón. Cualquier persona que ignore voluntariamente una regla de seguridad será responsable. Nadie esta excento de las reglas de seguridad",
+				"a5": "Todos nuestros empleados y partes interesadas tienen la competencia para emprender su trabajo con riesgos mitigados para la salud y la seguridad en el hogar y en el trabajo.",
+				"a6": "Todos deberán irse a casa de la misma manera en que llegaron: saludables y enteros",
+				"a7": "Todos lideramos la seguridad: “Predicamos con el ejemplo” ",
+				"a8": "Todo el mundo tiene la responsabilidad de dejar de realizar una tarea asignada o una actividad laboral si cree o sospecha que existe una condición insegura o un acto inseguro esta por ocurrir e inmediatamente ponerse en contacto con su supervisor.",
+				"a9": "Esperamos que todos contribuyan con el mejoramiento continuo para el negocio y el desempeño en seguridad"
+			}
+		},
+		"faq": {
+			"title": "FAQ",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus ex, congue ut eleifend ut, tempor faucibus sapien. Pellentesque commodo consectetur porta. Sed imperdiet placerat dolor at facilisis. Ut massa nulla, tincidunt ac est a, feugiat ullamcorper tellus. Fusce velit turpis, dictum vitae velit a, volutpat elementum metus. Nulla sed augue tortor. Sed id diam tristique, consequat urna rhoncus, pellentesque mauris. Maecenas vel magna eros. Vestibulum in ultricies nisl.",
+			"entries": {
+				"a1": {
+					"title": "How is the information posted in ZeroHarmBBS used?",
+					"description": "Unsafe acts, unsafe conditions, area for improvement and some findings from safety assessments are leading indicators.  That means we can use this information to prevent a potential incident (unplanned event).  Collectively, the data will allow the organization to make better strategic decisions regarding safety."
+				},
+				"a2": {
+					"title": "Do I have to put my name in the report?",
+					"description": "There is a space for your name.  It is not required as this is an anonymous system by choice and it meets European Privacy laws remaining anonymous.  However, UK sites excluded, adding your name to the report will allow site management to follow up with questions about your entry.  If we don’t know who put in the report and have questions, we cannot address the issue in an effective manner.  Please check with your site’s leadership team if you’re unsure on this."
+				},
+				"a3": {
+					"title": "Will I be punished if an employee reports me conducting an unsafe act?",
+					"description": "No.  BBS is not meant to punish a person reporting or a person getting reporting on.  It is a learning tool as much as a data collection exercise to prevent (leading indicators) incidents."
+				},
+				"a4": {
+					"title": "What happens if I cannot log on?",
+					"description": "See your safety representative or your operations manager."
+				},
+				"a5": {
+					"title": "I am a salesman and find an unsafe condition at a customer site.  Do I complete a ZeroHarmBBS unsafe condition for the customer site?  Does the customer site have a BBS process?",
+					"description": "If so, use that system.  If not, use ZeroHarmBBS.  There is a place for noting non-Dover location in ZeroHarmBBS."
+				},
+				"a6": {
+					"title": "If I have a suggestion for adding a box in unsafe acts, what do I do?",
+					"description": "In the lower left hand corner of the ZeroHarmBBS home page, there “Need Help” box.  Click on this and ask your question or make a suggestion.  NOTE: there is no automatic feedback loop built in the system just yet. "
+				},
+				"a7": {
+					"title": "What does something safe mean?",
+					"description": "If you put your cursor over the box, it will change color and a question mark will appear.  Put your cursor over the question mark and the definition of the category appears."
+				},
+				"a8": {
+					"title": "I am completing a safety assessment.  Do I have to complete all fields?",
+					"description": "No.  You may focus your attention on a particular area.  The fields present are meant to cover most issues found during an assessment."
+				},
+				"a9": {
+					"title": "I am completing an unsafe condition and the exact category for “what was observed” is not present.  What do I select?",
+					"description": "Here you make the most likely selection.  This is another reason to include your name (if outside the UK) so management can get more clarity on your entry if needed."
+				},
+				"a10": {
+					"title": "May I take photographs with my phone or tablet?",
+					"description": "Yes, we encourage this but please make sure you do so in accordance with your site’s cell phone policy.  There is a limit on file size.  If the picture won’t load, you have probably met the maximum limit on file size."
+				},
+				"a11": {
+					"title": "What happens after I complete an entry?",
+					"description": "An email will be sent to the location management team."
+				},
+				"a12": {
+					"title": "I am making an entry and don’t want to save my work.  What is the quickest way out of the area I am in?",
+					"description": "Click on this. It takes you to the home page."
+				},
+				"a13": {
+					"title": "I am making an entry and don’t have time to complete it and will come back.  Can I save my data?",
+					"description": "If you close out of the application while fill out your entry, the submission will not be saved and you will have to start over."
+				},
+				"a14": {
+					"title": "I submitted an unsafe condition and corrected the problem but I see the same unsafe condition again.  What do I do?",
+					"description": "Log it again and follow up with the local leadership for the area (supervisor, manager, etc.) and let them know.  Inputting the same information is okay as it shows a trend or lets the site know that the root cause was not addressed."
+				},
+				"a15": {
+					"title": "I have submitted an entry.  When can I expect action to take place?",
+					"description": "If possible we would love to hear your story of your involvement in the solution.  For matters that you cannot directly or immediately impact, there are other options.  Maintenance requests should follow your local protocol.  If it is a safety issue that needs immediate attention or additional support, please address it directly with a manager so they can follow up on it.  Please keep in mind that this system is not an action tracker who assigns owners."
+				}
+			}
+		},
+		"tour": {
+			"title": "¿Qué quieres hacer?",
+			"unsafeAct": {
+				"one": {
+					"title": "Welcome to Zero Harm BBS",
+					"description": "Zero Harm BBS is a behavioral based safety application designed to replace traditional T-Cards and Saw cards."
+				},
+				"two": {
+					"title": "6 Areas",
+					"description":"The app currently has 6 different areas to report on.  You can report Unsafe Acts, Unsafe Conditions, Near Misses, Something Safe, Opportunities for Improvement and Safety Assessments. Let's say you observed someone committing an unsafe act."
+				},
+				"three": {
+					"title": "Select Your Location",
+					"description":"You begin by selecting your location, the area of the plant that it occured in and your name if you are in locations outside of the U.K.  Each area of reporting will begin with this step.  Clicking the Continue button at the bottom of each page in the app will advance you to the next page after you have filled out all of the necessary fields."
+				},
+				"four": {
+					"title": "Select Your Safety Concern",
+					"description":"Next, find a category that the Unsafe Act falls under.  You can select multiple choices if it falls under multiple categories.  Each category will hav sub-categories, so make sure that you fill out all sub-categories before moving on!"
+				},
+				"five": {
+					"title": "Describe in Greater Detail",
+					"description": "Describe the act in greater detail by writing more about the act.  You can even take pictures if necessary and upload them with your report."
+				},
+				"six": {
+					"title": "Review your entry",
+					"description": "Finish your report by reviewing the entry that you have entered.  If you see something that needs to be changed..."
+				},
+				"seven": {
+					"title": "Edit if needed",
+					"description": "Edit the entry as you see fit.  After making sure that everything is correct, click the Submit button to submit your report.  And that's it!  Manager's will now be able to review your report and you will have made your place of work safer as a result!"
+				}
+			},
+			"unsafeCondition": {
+				"one": {
+					"title": "Welcome to Zero Harm BBS",
+					"description": "Zero Harm BBS is a behavioral based safety application designed to replace traditional T-Cards and Saw cards."
+				},
+				"two": {
+					"title": "6 Areas",
+					"description":"The app currently has 6 different areas to report on.  You can report Unsafe Acts, Unsafe Conditions, Near Misses, Something Safe, Opportunities for Improvement and Safety Assessments. Let's say you observed an unsafe condition."
+				},
+				"three": {
+					"title": "Select Your Location",
+					"description":"You begin by selecting your location, the area of the plant that it occured in and your name if you are in locations outside of the U.K.  Each area of reporting will begin with this step.  Clicking the Continue button at the bottom of each page in the app will advance you to the next page after you have filled out all of the necessary fields."
+				},
+				"four": {
+					"title": "Select Your Safety Concern",
+					"description":"Next, find a category that the Unsafe Condition falls under.   You can select multiple choices if it falls under multiple categories.  Each category will hav sub-categories, so make sure that you fill out all sub-categories before moving on!"
+				},
+				"five": {
+					"title": "Describe in Greater Detail",
+					"description": "Describe the condition in greater detail by writing more about the condition present.  You can even take pictures if necessary and upload them with your report."
+				},
+				"six": {
+					"title": "Review your entry",
+					"description": "Finish your report by reviewing the entry that you have entered.  If you see something that needs to be changed..."
+				},
+				"seven": {
+					"title": "Edit if needed",
+					"description": "Edit the entry as you see fit.  After making sure that everything is correct, click the Submit button to submit your report.  And that's it!  Manager's will now be able to review your report and you will have made your place of work safer as a result!"
+				}
+			},
+			"nearMiss": {
+				"one": {
+					"title": "Welcome to Zero Harm BBS",
+					"description": "Zero Harm BBS is a behavioral based safety application designed to replace traditional T-Cards and Saw cards."
+				},
+				"two": {
+					"title": "6 Areas",
+					"description":"The app currently has 6 different areas to report on.  You can report Unsafe Acts, Unsafe Conditions, Near Misses, Something Safe, Opportunities for Improvement and Safety Assessments. Let's say you observed a near miss."
+				},
+				"three": {
+					"title": "Select Your Location",
+					"description":"You begin by selecting your location, the area of the plant that it occured in and your name if you are in locations outside of the U.K.  Each area of reporting will begin with this step.  Clicking the Continue button at the bottom of each page in the app will advance you to the next page after you have filled out all of the necessary fields."
+				},
+				"four": {
+					"title": "Describe in Greater Detail",
+					"description": "Describe the near miss in detail by filling out the form above.  You can even take pictures if necessary and upload them with your report."
+				},
+				"five": {
+					"title": "Review your entry",
+					"description": "Finish your report by reviewing your entry.  If you see something that needs to be changed..."
+				},
+				"six": {
+					"title": "Edit if needed",
+					"description": "Edit the entry as you see fit.  After making sure that everything is correct, click the Submit button to submit your report.  And that's it!  Manager's will now be able to review your report and you will have made your place of work safer as a result!"
+				}
+			},
+			"somethingSafe": {
+				"one": {
+					"title": "Welcome to Zero Harm BBS",
+					"description": "Zero Harm BBS is a behavioral based safety application designed to replace traditional T-Cards and Saw cards."
+				},
+				"two": {
+					"title": "6 Areas",
+					"description":"The app currently has 6 different areas to report on.  You can report Unsafe Acts, Unsafe Conditions, Near Misses, Something Safe, Opportunities for Improvement and Safety Assessments. Let's say you observed someone doing something safe and want to report the positive thing that the person did."
+				},
+				"three": {
+					"title": "Select Your Location",
+					"description":"You begin by selecting your location, the area of the plant that it occured in and your name if you are in locations outside of the U.K.  Each area of reporting will begin with this step.  Clicking the Continue button at the bottom of each page in the app will advance you to the next page after you have filled out all of the necessary fields."
+				},
+				"four": {
+					"title": "Determine what it is",
+					"description":"First, determine whether or not the Something Safe that you observed was an act or a condtion. Then, find a category that the Safe act falls under.  You can select multiple choices if it falls under multiple categories."
+				},
+				"five": {
+					"title": "Describe in Greater Detail",
+					"description": "Describe it in greater detail by filling out the form above.  You can even take pictures if necessary and upload them with your report."
+				},
+				"six": {
+					"title": "Review your entry",
+					"description": "Finish your report by review the entry that you have entered.  If you see something that needs to be changed..."
+				},
+				"seven": {
+					"title": "Edit if needed",
+					"description": "Edit the entry as you see fit.  After making sure that everything is correct, click the Submit button to submit your report.  And that's it!  Manager's will now be able to review your report and you will have made your place of work safer as a result!"
+				}
+			},
+			"improvement": {
+				"one": {
+					"title": "Welcome to Zero Harm BBS",
+					"description": "Zero Harm BBS is a behavioral based safety application designed to replace traditional T-Cards and Saw cards."
+				},
+				"two": {
+					"title": "6 Areas",
+					"description":"The app currently has 6 different areas to report on.  You can report Unsafe Acts, Unsafe Conditions, Near Misses, Something Safe, Opportunities for Improvement and Safety Assessments. Let's say you have found a way to possibly improve the workflow and safety for one of your co-workers by submitting an opportunity for improvement."
+				},
+				"three": {
+					"title": "Select Your Location",
+					"description":"You begin by selecting your location, the area of the plant that it occured in and your name if you are in locations outside of the U.K.  Each area of reporting will begin with this step.  Clicking the Continue button at the bottom of each page in the app will advance you to the next page after you have filled out all of the necessary fields."
+				},
+				"four": {
+					"title": "Select Your Safety Concern",
+					"description":"Next, find the category that the Improvement falls under."
+				},
+				"five": {
+					"title": "Describe in Greater Detail",
+					"description": "Describe it in greater detail by filling out the form above.  You can even take pictures if necessary and upload them with your report."
+				},
+				"six": {
+					"title": "Review your entry",
+					"description": "Finish your report by reviewing what you have entered.  If you see something that needs to be changed..."
+				},
+				"seven": {
+					"title": "Edit if needed",
+					"description": "Edit the entry as you see fit.  After making sure that everything is correct, click the Submit button to submit your report.  And that's it!  Manager's will now be able to review your report and you will have made your place of work safer as a result!"
+				}
+			},
+			"safetyAudit": {
+				"one": {
+					"title": "Welcome to Zero Harm BBS",
+					"description": "Zero Harm BBS is a behavioral based safety application designed to replace traditional T-Cards and Saw cards."
+				},
+				"two": {
+					"title": "6 Areas",
+					"description":"The app currently has 6 different areas to report on.  You can report Unsafe Acts, Unsafe Conditions, Near Misses, Something Safe, Opportunities for Improvement and Safety Assessments. Let's say you want to fill out a safety assessment."
+				},
+				"three": {
+					"title": "Select Your Location",
+					"description":"You begin by selecting your location, the area of the plant that it occured in, your name (if you are in locations outside of the U.K.) and the specific area that you assessed within this assessment.  Click continue after you have filled out all of the necessary fields."
+				},
+				"four": {
+					"title": "Read the instructions",
+					"description":"The Safety Assessment contains instructions on how to use it.  Make sure you review the instructions portion of this route if you need a refresher on how to use it correctly."
+				},
+				"five": {
+					"title": "Fill out the Assessment",
+					"description":"Here is where you fill out the assessment.  While you go through your assessment, there are a selection of different areas that you may assess on your walk-through.  As you walk-through, you can select either Applicable & Inspected, Not Applicable and Not Inspected. Click Applicable & Inspected if you want to begin assessing this area.  When you click Applicable & Inspected, it will open up a list of different areas to check off in order to complete the assessment for that area.  You can also record your finding in more depth in the Findings box and upload any picture that you may want to take as you are inspecting this area.  If something doesn't apply to your assessment, select the Not Applicable box and if you decided to not inspect an area, click the Not Inspected box.  All options must be filled out before moving forward."
+				},
+				"six": {
+					"title": "Review your entry",
+					"description": "Finish your report by review the entry that you have entered.  If you see something that needs to be changed..."
+				},
+				"seven": {
+					"title": "Edit if needed",
+					"description": "Edit the entry as you see fit.  After making sure that everything is correct, click the Submit button to submit your report."
+				}
+			}
+		}
+	},
+	"home": {
+		"title": "Que quieres reportar?",
+		"routes": {
+			"unsafeAct": {
+				"title": "Acto inseguro",
+				"tooltip": "Un <b>acto inseguro</b> es cualquier acto que se desvía de una forma segura generalmente utilizada o un método específico de hacer un trabajo y que aumenta las probabilidades de un accidente. Un acto inseguro puede ser un error voluntario o humano. La acción o falta de accion humana inicia el acto."
+			},
+			"unsafeCondition": {
+				"title": "Condicion insegura",
+				"tooltip": "Una <b>condición insegura</b> es una condición física insatisfactoria o riesgos que existen en un ambiente de trabajo inmediatamente antes a un incidente y que es significativo para iniciar el evento. La condición insegura, si no es atendida o eliminada puede resultar en lesiones, la muerte o daños a la propiedad. Algunos de estos riesgos incluyen procedimientos deficientes de seguridad, no seguir los procedimientos, mal funcionamiento del equipo o las herramientas, o no utilizar el equipo de seguridad o el EPP necesarios."
+			},
+			"nearMiss": {
+				"title": "Incidente",
+				"tooltip": "Un <b>Near miss/Incidente</b> es un evento no planificado que no resultó en lesiones, enfermedades o daños, pero tenía el potencial para hacerlo. Solo una afortunada ruptura en la cadena de eventos previno una lesión, fatalidad o daño."
+			},
+			"somethingSafe": {
+				"title": "Algo Seguro",
+				"tooltip": "Un acto o condición que, cuando se observa, promueve una cultura de seguridad. <b>Algo seguro</b> significa un refuerzo positivo del buen comportamiento y las condiciones."
+			},
+			"opportunityForImprovement": {
+				"title": "Oportunidad de mejora",
+				"tooltip": "Una <b>oportunidad de mejora</b> es la mejora de un proceso, diseño, EPP, maquinaria, etc. Algo que se puede relacionar con Seguridad/Mejora continua e implementar para mejorar el centro de trabajo."
+			},
+			"safetyAudit": {
+				"title": "Evaluación de seguridad",
+				"tooltip": "El objetivo de una <b>Evaluación de Seguridad</b> es identificar las condiciones peligrosas y defectuosas para garantizar que nuestros empleados trabajen de la manera más segura posible y entorno."
+			}
+		}
+	},
+	"nearMiss": {
+		"page2": {
+			"description": {
+				"title": "Descripcion de incidente"
+			},
+			"beforePhotos": {
+				"title": "Foto(s) antes"
+			},
+			"corrective": {
+				"title": "Acciones preventivas y correctivas tomadas"
+			},
+			"afterPhotos": {
+				"title": "Foto(s) Despues"
+			},
+			"email": {
+				"title": "Si no pudiste resolverlo tu mismo, favor de dar click aqui"
+			}
+		}
+	},
+	"opportunityForImprovement": {
+		"page2": {
+			"title": "Que se observo?",
+			"list": {
+				"l1": {"checkName": "Lay-out"},
+				"l2": {"checkName": "Maquinaria"},
+				"l3": {"checkName": "Equipo de proteccion personal"},
+				"l4": {"checkName": "Procedimientos"},
+				"l5": {"checkName": "Edificio"}
+			}
+		},
+		"page3": {
+			"problem": {
+				"title": "Descripcion de incidente"
+			},
+			"improvement": {
+				"title": "Descripcion de la idea/mejora"
+			},
+			"email": {
+				"title": "Si no pudiste resolverlo tu mismo, favor de dar click aqui"
+			}
+		}
+	},
+	"somethingSafe": {
+		"page2": {
+			"title": "Que se observo?",
+			"list": {
+				"l1": {
+					"name": "Acto seguro",
+					"prop": {
+						"b1": {"checkName": "Area de trabajo limpia"},
+						"b2": {"checkName": "Posicion adecuada para la tarea"},
+						"b3": {"checkName": "Maquinaria/equipo/herramientas en lugares correctos"},
+						"b4": {"checkName": "Operacion de maquinaria/equipo/herramientas bajo control"},
+						"b5": {"checkName": "Servicio a maquinaria/equipo con las guardas de seguridad adecuadas (Candadeo/etiquetado, siguiendo instrucciones)"},
+						"b6": {"checkName": "Usando adecuadamente maquinaria/equipo"},
+						"b7": {"checkName": "Verificacion de maquinaria/equipo/herramientas/EPP en buenas condiciones antes de su uso"},
+						"b8": {"checkName": "Uso adecuado de EPP"},
+						"b9": {"checkName": "EPP adecuado para el trabajo"},
+						"b10": {"checkName": "Usando equipo de seguridad asegurando su efectividad"},
+						"b11": {"checkName": "Implementando barreras y señalizacion de seguridad"},
+						"b12": {"checkName": "Se observa barreras y señalizacion de seguridad"},
+						"b13": {"checkName": "Siguiendo instrucciones verbales e impresas de los procesos"},
+						"b14": {"checkName": "Objetos asegurados correctamente"},
+						"b15": {"checkName": "Carga correcta"},
+						"b16": {"checkName": "Levantamiento correcto"},
+						"b17": {"checkName": "Planeacion antes de empezar el trabajo"},
+						"b18": {"checkName": "Otro"}
+					}
+				},
+				"l2": {
+					"name":"Condicion segura",
+					"prop": {
+						"b1": {"checkName": "Area de trabajo en orden, limpia y segura"},
+						"b2": {"checkName": "No hay peligro de tropezones, resbalones o caidas"},
+						"b3": {"checkName": "No hay peligro de fuego o explosiones"},
+						"b4": {"checkName": "No hay peligros electricos, de corriente, electricidad estatica, etc."},
+						"b5": {"checkName": "Provision/accesibilidad adecuada de EPP"},
+						"b6": {"checkName": "EPP en buenas condiciones"},
+						"b7": {"checkName": "Adecuadas y efectivas señalizaciones y barreras"},
+						"b8": {"checkName": "No hay potencial de caida de objetos"},
+						"b9": {"checkName": "El area de trabajo tiene el espacio adecuado y accesos seguros"},
+						"b10": {"checkName": "Las condiciones laborales son adecuadas. Ej. Iluminacion, ventilacion, temperatura, etc."},
+						"b11": {"checkName": "La presion de produccion para la entrega del producto no excede la presion para las practicas de trabajo seguras"},
+						"b12": {"checkName": "Numero adecuado de personal asignado al trabajo"},
+						"b13": {"checkName": "Otro"}
+					}
+				}
+			}
+		},
+		"page3": {
+			"email": {
+				"title": "Click aqui si tuviste una conversacion con la persona"
+			}
+		}
+	},
+	"safetyAudit": {
+		"page2": {
+			"title": "Lineamientos",
+			"content": "Si ve una condición o acto inseguro, intervenga inmediatamente. Avisar a su supervisor o lider y realizar una observaccion BBS de un acto o condición insegura e informar al responsable del area inmediatamente. No todas las áreas en esta Auditoría de Seguridad deben completarse. Concéntrese en áreas de alto riesgo (en su opinión). Si no está seguro acerca de un área, busque un miembro del personal de la  planta que le ayude a realizar la auditoría. La lista proporciona un elemento y una dimensión para cada área de la inspección. Algunos artículos pueden no ser aplicables. Si es así, marque la casilla N/A. Si no se inspecciona, marque la casilla NI.",
+			"list": "<ol><li>Observe cómo se llevan a cabo las tareas?</li><li>¿Qué le dicen las medidas de seguridad al operador, a la empresa y a los clientes?</li><li>¿Cuáles son las 3 mejores oportunidades de mejora de seguridad?</li><li>¿Se están abordando las ideas de seguridad y de manera oportuna?</li><li>¿Cuál es el principal enfoque de seguridad del negocio? ¿Se destaca y se conoce en el área?</li><li>¿Se observan y se adhieren los elementos básicos de seguridad, por ej. EPP y orden y limpieza del area?</li><li>¿La organización del lugar de trabajo a través de 5S crea un entorno de trabajo seguro? ¿Se está cumpliendo 5S?</li><li>¿El trabajo estándar respalda la finalización de tareas seguras?</li><li>¿El equipo está en buenas condiciones o necesita reparación? ¿Máquina, guardas, interlocks, herramientas manuales, equipo de seguridad?</li><li>¿El ambiente es seguro, es decir, el almacenamiento de materiales, pisos, polvo, ruido, humos, iluminación, obstrucciones en el área?</li></ol>"
+		},
+		"page3": {
+			"title": "Areas auditadas",
+			"global": {
+				"comments": "Recomendaciones",
+				"inspection": "Inspección"
+			},
+			"options": {
+				"choose": "- Elige una opcion -",
+				"applicable": "Aplicable e inspeccionado",
+				"notApplicable": "No aplicable",
+				"notInspected": "No inspeccionado"
+			},
+			"list": {
+				"a0": {
+					"aElID": "0",
+					"aElName": "Operacion de maquinaria",
+					"aElDesc": ["Guardas en su lugar y en buenas condiciones", "Guardas adicionales para eliminar los peligros", "Prevención de arranque accidental de máquina(s)", "Displays y controles correctamente codificados por color y etiquetados", "Fugas", "Mantenimiento preventivo", "Se hablo con el operador?"]
+				},
+				"a1": {
+					"aElID": "1",
+					"aElName": "Equipo de transmisión y máquinaria",
+					"aElDesc": ["Correas, poleas, ejes, piezas giratorias y tornillos de fijación protegidos", "Desconexion de maquina fácilmente accesible", "Desconexion de maquina en buen estado de funcionamiento", "Bloquear aditamentos de la maquina"]
+				},
+				"a2": {
+					"aElID": "2",
+					"aElName": "Herramientas manuales",
+					"aElDesc": ["Herramientas rotas o hechizas", "Condición de los mangos y cabezas de herramientas", "Las herramientas que no producen chispas", "Herramientas eléctricas portátiles debidamente conectadas a tierra o con doble aislamiento", "Consulte con un empleado que use una herramienta de mano."]
+				},
+				"a3": {
+					"aElID": "3",
+					"aElName": "Orden y limpieza",
+					"aElDesc": ["Condición de pasillos, áreas de trabajo, escaleras y áreas exteriores", "Racks y bines proporcionados para piezas pequeñas convenientemente ubicadas", "Materiales en proceso cuidadosamente almacenados", "Botes de basura en el area y usados", "Condición de las instalaciones del baño, ventilación, lockers, etc.", "Peligros de resbalones y tropiezos", "Areas desorganizadas"]
+				},
+				"a4": {
+					"aElID": "4",
+					"aElName": "Manejo de materiales",
+					"aElDesc": ["Camiones manuales y eléctricos", "Materiales apilados de forma segura", "Pesos de los artículos manejados manualmente identificados", "Se publicaron las instrucciones adecuadas para el levantamiento manual", "¿Empleados capacitados para técnicas de levantamiento?", "Pallets, polipastos, gruas, gruas manuales y dispositivos de carga observados", "Ropa protectora", "Problemas ergonómicos"]
+				},
+				"a5": {
+					"aElID": "5",
+					"aElName": "Higiene industrial",
+					"aElDesc": ["Áreas de trabajo: niveles excesivos de polvo, vapores, gases, humo, ruido, etc.", "Espacios confinados correctamente identificados", "Se identificaron áreas de alto ruido", "Doble protección auditiva", "Hojas de SDS accesibles para su revisión"]
+				},
+				"a6": {
+					"aElID": "6",
+					"aElName": "Pisos, pasillos y suiperficies",
+					"aElDesc": ["Pisos sin clavos sobresalientes, astillas, agujeros, resbaladizo, irregulares, tablas sueltas, etc.", "Aberturas debidamente protegidas", "Operaciones de levantamiento planificadas", "Barreras colocadas"]
+				},
+				"a7": {
+					"aElID": "7",
+					"aElName": "Escaleras y escalones",
+					"aElDesc": ["Condición de los escalones y soportes", "Barandales e iluminación adecuada", "Condición de las escaleras", "Tipo de material ALUMINIO, MADERA, COMPUESTO O COMBINACIÓN", "Fecha de inspección actual", "Almacenamiento de escalera", "Se utilizan pies de seguridad correctos para cada trabajo"]
+				},
+				"a8": {
+					"aElID": "8",
+					"aElName": "Primeros auxilios",
+					"aElDesc": ["Suministros adecuado de primeros auxilios", "Personal capacitado en primeros auxilios disponible", "Lesiones informadas y tratadas", "Incidentes de primeros auxilios investigados", "Estaciones de lavado de ojos llenas y probadas regularmente", "Registros de OSHA 300 o equivalente"]
+				},
+				"a9": {
+					"aElID": "9",
+					"aElName": "Equipo eléctrico",
+					"aElDesc": ["Condición de los tableros, los transformadores (dentro y fuera de la instalación), el cableado, los controles y el aparato de operación", "Alfombra de goma en el piso frente a tableros electricos", "Equipo debidamente protegido y aislado", "Área libre de herramientas o basura", "Cables flojos o desconectados", "Cinta eléctrica de cables / conductores", "Condición de los conductos de cables (Conduit)", "Ninguna ranura abiertas en los interruptores", "Programa LOTO"]
+				},
+				"a10": {
+					"aElID": "10",
+					"aElName": "Prevención de fuego",
+					"aElDesc": ["Salidas adecuadas, bien ubicadas, marcadas, claras, facilidad para abrir/cerrar puertas y bien iluminadas", "Los empleados saben dónde se encuentra la salida más cercana", "Fecha de ultimo simulacro de incendio", "Equipo de combate contra incendio bien colocado y listo para su uso inmediato", "Condición y presion de los medidores de extintores portátiles", "Última inspección anual/mensual", "No debe colocarse ningún material cerca de las mangueras contra incendios o rociadores"]
+				},
+				"a11": {
+					"aElID": "11",
+					"aElName": "Recipientes a presión",
+					"aElDesc": ["Receptores de aire, calentadores de agua, calderas, etc. recientemente inspeccionados", "Válvulas de seguridad, indicadores de agua y paros de emergencia revisadas asi como tanques drenados regularmente", "Cilindros de gas almacenados lejos del sol y fijados de forma segura en su lugar con lugares separados para diferentes gases", "Requisitos del código cumplidos?"]
+				},
+				"a12": {
+					"aElID": "12",
+					"aElName": "Prácticas seguras",
+					"aElDesc": ["Máquinas detenidas antes de la limpieza y bloqueadas / etiquetadas durante las reparaciones", "EPP (ojos, cara, pies, cabeza, oído, etc.) en buenas condiciones, usado cuando se necesita y almacenado adecuadamente", "Se observaron actos inseguros", "Se observaron condiciones inseguras"]
+				},
+				"a13": {
+					"aElID": "13",
+					"aElName": "Educación de seguridad",
+					"aElDesc": ["Posters, política de seguridad, señalamientos de seguridad e instrucciones de trabajo visibles", "Número correcto de empleados para el tamaño de la instalación", "Bien ubicado", "Literatura de seguridad distribuida", "Educacion sobre seguridad frecuente", "Conocimiento de la política de Seguridad e higiene y principios que nos guian"]
+				}
+			}
+		}
+	},
+	"unsafeAct": {
+		"page2": {
+			"title": "Que se observo?",
+			"list": {
+				"l1": {
+					"checkName": "Tropezar/Resbalar/Caer",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "r",
+					"subCheck1": ["Resbalar/Tropezar/Caer debido a un objeto colocado permanentemente en un lugar", "Resbalar/Tropezar/Caer debido a un objeto colocado temporalmente en un lugar"]
+				},
+				"l2": {
+					"checkName": "Ergonomia",
+					"subTitle1": "Severidad",
+					"subCheck1Type": "r",
+					"subCheck1": ["Inmediata (Rojo)", "Necesita investigacion (Ambar)", "Postura correcta corregida (Verde)"],
+					"subTitle2": "Parte del cuerpo que afecta",
+					"subCheck2Type": "c",
+					"subCheck2": ["Brazo", "Mano", "Muñeca", "Codo", "Hombro", "Espalda", "Cuello", "Torso", "Pierna", "Rodilla", "Tobillo"]
+				},
+				"l3": {
+					"checkName": "Levantamiento manual",
+					"subTitle1": "Cual fue el problema?",
+					"subCheck1Type": "c",
+					"subCheck1": ["Carga demasiada pesada", "Carga demasiada voluminosa", "Carga requiere de dos personas", "Carga requiere de herramienta de carga"]
+				},
+				"l4": {
+					"checkName": "Polipasto, Montacargas, movimiento de maquinaria",
+					"subTitle1": "Cual fue el problema?*",
+					"subCheck1Type": "c",
+					"subCheck1": ["No se colocaron barreras", "Sin observador", "Sin plan de levantamiento", "Sin cinturon de seguridad en montacargas", "Sin señal auditiva en montacargas"]
+				},
+				"l5": {
+					"checkName": "Energia almacenada",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": ["Aire", "Electrica", "Fluido", "Mecanica", "Caida de objetos", "Candadeo y etiquetado sin completar"]
+				},
+				"l6": {
+					"checkName": "Riesgo quimico",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": ["Etiquetado", "Almacenado", "Exposicion"]
+				},
+				"l7": {
+					"checkName": "Medio ambiente",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": ["Etiquetado", "Almacenado", "Exposicion"]
+				},
+				"l8": {
+					"checkName": "Espacio confinado",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": ["En espacio confinado sin permiso", "Trabajando en USA sin señalizacion"]
+				},
+				"l9": {
+					"checkName": "Trabajo en alturas",
+					"subTitle1": "Cual fue el problema?",
+					"subCheck1Type": "c",
+					"subCheck1": ["Trabajando sin restricciones", "Trabajando sin segundo hombre", "Trabajando sin barreras/delimitaciones", "Trabajando sin permiso de alturas"]
+				},
+				"l10": {
+					"checkName": "Equipo de proteccion personal (EPP)",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": ["Sin equipo de proteccion personal", "Equipo de proteccion personal usado incorrectamente"]
+				},
+				"l11": {
+					"checkName": "Desviar proceso"
+				},
+				"l12": {
+					"checkName": "Plan de accion de emergencia",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "r",
+					"subCheck1": ["Fallo en el seguimiento o entenimiento del plan de accion de emergencia"]
+				},
+				"l13": {
+					"checkName": "Mantenimiento",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": ["Edificio", "Equipo"]
+				}
+			}
+		}
+	},
+	"unsafeCondition": {
+		"page2": {
+			"title": "Que se observo?",
+			"list": {
+				"l1": {
+					"checkName": "Tropezar/resbalar/caer",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": [["Escaleras fijas"], ["Pasillo"], ["Condiciones del suelo inseguras"], ["Condiciones resbaladizas de manejo de material"], ["Escaleras portatiles y plataformas"],
+											["Barandillas, barreras y pasamanos"], ["Condiciones del medio ambiente"], ["Superficie de maquina (Dentro de la maquina)"]]
+				},
+				"l2": {
+					"checkName": "Levantamiento manual",
+					"subTitle1": "Cual es el problema?",
+					"subCheck1Type": "r",
+					"subCheck1": [["Dispositivo inadecuado"], ["Dispositivo no disponible"], ["Objeto por encima del limite de carga de peso "]]
+				},
+				"l3": {
+					"checkName": "Ergonomia",
+					"subTitle1": "Severidad",
+					"subCheck1Type": "r",
+					"subCheck1": [["Inmediata"], ["Largo plazo"]],
+					"subTitle2": "Parte del cuerpo afectada",
+					"subCheck2Type": "c",
+					"subCheck2": [["Brazo"], ["Mano"], ["Muñeca"], ["Codo"], ["Hombro"], ["Espalda"], ["Cuello"], ["Torso"], ["Pierna"], ["Rodilla"], ["Tobillo"]]
+				},
+				"l4": {
+					"checkName": "Polipasto, Montacargas, movimiento de maquinaria",
+					"subTitle1": "Cual es el problema?",
+					"subCheck1Type": "r",
+					"subCheck1": [["Dispositivo inadecuado o sin dispositivo de maniobra"], ["Orden de trabajo inadecuada"], ["Maquinaria en malas condiciones de trabajo (Claxon sin funcionar, luces fundidas, etc."], ["No hay evidencia de inspeccion diaria"],
+											["Herramientas no aprobadas (Ej. Hechizas)"]]
+				},
+				"l5": {
+					"checkName": "Energia almacenada",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": [["Aire"], ["Electrico"], ["Mecanico", ["Porque?", "r", [["Medios no evidentes de desconexion"], ["Instrucciones inadecuadas para el trabajo seguro"]]]],
+											["Caida de objetos", ["Porque?", "c", [["Colocacion incorrecta"], ["Restriccion inadecuada"],
+											["Inadecuada capacidad de carga para los estantes de un dispositivo de carga como rack o carrito transportador"]]]], ["Procedimiento de candadeo y etiquetado no seguido o seguido de manera incorrecta"]]
+				},
+				"l6": {
+					"checkName": "Riesgos quimicos",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": [["Etiquetado incorrecto"], ["Almacenaje incorrecto"], ["Exposicion al quimico"], ["Manejo inadecuado"], ["Uso inadecuado"], ["Hoja de datos de seguridad no se puede ver/no esta accesible"]]
+				},
+				"l7": {
+					"checkName": "Medio ambiente",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": [["Reciclaje inadecuado (Baterias, desperdicios aceites, solventes, etc)"], ["Contencion de derrames inadecuada"], ["Disposicion de residuos inadecuada"]]
+				},
+				"l8": {
+					"checkName": "Espacios confinados",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "r",
+					"subCheck1": [["Señalizacion inadecuada"], ["Control de acceso inadecuado"], ["No has dispositivo para monitorear (ej. SO2, CO, CO2, falta de oxigeno, etc.)"], ["Falta de ventilacion"]]
+				},
+				"l9": {
+					"checkName": "Trabajo en alturas",
+					"subTitle1": "Cual es el problema?",
+					"subCheck1Type": "c",
+					"subCheck1": [["Falta de Escaleras y plataformas, o en malas condiciones"], ["Falta de Barandillas, barreras y pasamanos o en malas condiciones"], ["Falta de EPP y restricciones de caida"]]
+				},
+				"l10": {
+					"checkName": "EPP",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "r",
+					"subCheck1": [["Ninguno"], ["Inadecuado"], ["Vida util vencida"]]
+				},
+				"l11": {
+					"checkName": "Accesos bloqueados",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": [["Ingreso/salida bloqueada (objetos obstruyendo)"], ["Acceso a panel electrico"], ["Extinguidores"], ["Salidas de emergencia"], ["Kit de primeros auxilios"],
+											["Estaciones lavaojos"], ["Panel de control"], ["Otro"]]
+				},
+				"l12": {
+					"checkName": "Señalizacion",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "r",
+					"subCheck1": [["Instalaciones (Edificio y terreno)"], ["Señalizacion de emergencia", ["Porque?", "c", [["Salidas de emergencia"], ["Extintores y estaciones de jalon"], ["Estaciones lavaojos"], ["Refugios de problemas climaticos (Zona segura)"]]]]]
+				},
+				"l13": {
+					"checkName": "Plan de emergencia",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "r",
+					"subCheck1": [["No actual"], ["No hay evidencia de entrenamiento"]]
+				},
+				"l14": {
+					"checkName": "Mantenimiento",
+					"subTitle1": "Tipo",
+					"subCheck1Type": "c",
+					"subCheck1": [["MPs no estan actualizados o no hay evidencia de MPs"], ["Equipo en malas condiciones"], ["Problemas con la instalacion (Fugas, condiciones ambientales (Calor, frio flujo de aire, etc.) puertas, pavimento, etc.)"],
+											["Espacio inadecuado alrededor de las máquinas"],["Sin desconexión ni corte de emergencia"], ["Falta de guardas"]]
+				},
+				"l15": {
+					"checkName": "Manejo de materiales",
+					"subTitle1": "Tipo",
+					"ubCheck1Type": "c",
+					"subCheck1": [["Objetos no asegurados adecuadamente"], ["Estantes, carritos y equipo no estan en buenas condiciones"], ["Unidades de almacenaje no etiquetadas (Ej. Capacidad de los estantes)"], ["Otro"]]
+				}
+			}
+		}
+	},
+	"admin": {
+		"login": {
+			"titleAdmin": "Acceso administrador BBS",
+			"titleApp": "Iniciar sesión",
+			"user": "Usuario",
+			"pass":"Contraseña",
+			"login":"Iniciar sesion",
+			"forgot":"Olvide la contraseña?",
+			"signedOutTitle":"Cerró sesión",
+			"signedOutDesc":"Usted está ahora desconectado"
+		},
+		"profile": {
+			"loginInfo": "Mi Informacion de Sesion",
+			"profile": "Perfil",
+			"email": "Email",
+			"update": "Actualizar Perfil",
+			"change": "Cambiar contraseña",
+			"old": "Contraseña anterior",
+			"new": "Contraseña nueva",
+			"confirm": "Confirmar contraseña nueva"
+		},
+		"global": {
+			"dashboard": "Tablero general",
+			"overview": "Visión de conjunto",
+			"all": "Todos los sitios",
+			"recentActivity": "Actividad reciente",
+			"reports30": "Reporte de los ultimos 30 dias",
+			"reportsLatest": "Ultimos reportes",
+			"recentSubmissions": "Entradas mas recientes:",
+			"appUsage": "Utilizacion de la App",
+			"reports45": "Reportes diarios durante de 45 dias",
+			"reportsNumber": "Numero de reportes",
+			"print": "Imprimir grafica",
+			"downloadpng": "Bajar a imagen PNG",
+			"downloadjpeg": "Bajar a imagen JPEG",
+			"downloadpdf": "Bajar a documento PDF",
+			"submitted": "Reportadas",
+			"days": {
+				"mon": "Lun",
+				"tue": "Mar",
+				"wed": "Mie",
+				"thr": "Jue",
+				"fri": "Vie",
+				"sat": "Sab",
+				"sun": "Dom"
+			}
+		}
+	}
+}

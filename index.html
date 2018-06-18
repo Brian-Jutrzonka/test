@@ -1,0 +1,198 @@
+<html lang="en" ng-app="doverApp">
+	<head>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/assets/angular/css/style.css" />
+		<link rel="icon" href="/assets/angular/images/favicon.png">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
+		<base href="/">
+	</head>
+	<body id="app">
+		<div id="main-header" class="header" ng-controller="headerController as header">
+			<div id="mobile-menu" ng-controller="mmenuController as mmenu">
+				<ul>
+					<li class="menu-item mobile-menu-item-home"><a ng-click="userFormStatus('/')" translate="global.header.home"></a></li>
+					<li class="menu-item mobile-menu-item-notices"><a ng-click="userFormStatus('/#/notices')" translate="global.header.notices"></a></li>
+					<li class="menu-item mobile-menu-item-principles"><a ng-click="userFormStatus('/#/9-guiding-principles')" translate="global.header.guidingPrinciples"></a></li>
+					<li class="menu-item mobile-menu-item-help">
+						<a>Help</a>
+						<ul class="sub-menu">
+							<li><a class="menu-item menu-item-faq" ng-click="userFormStatus('/#/faq')" translate="global.header.faq"></a></li>
+							<li><a class="menu-item menu-item-tour" ng-click="userFormStatus('/#/tour')" translate="global.header.tour"></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-8 col-sm-6 col-md-3">
+						<div id="header-left">
+							<a ng-click="userFormStatus('/')">
+								<img src="/assets/angular/images/logo.png">
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-4 col-sm-6 col-md-9">
+						<div id="header-right">
+							<div id="header-top-right">
+								<div id="language-select">
+									<select ng-model="language" ng-change="changeLanguage(language)">
+										<option value="" translate="global.header.language"></option>
+										<option value="en">English</option>
+										<option value="es">Español</option>
+									</select>
+								</div>
+							</div>
+							<div id="header-bottom-right">
+								<div id="mobile-menu-button">
+									<a href="#mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+								</div>
+								<div id="main-navigation">
+									<ul>
+										<li class="menu-item menu-item-home"><a ng-click="userFormStatus('/')" translate="global.header.home"></a></li>
+										<li class="menu-item menu-item-notices"><a ng-click="userFormStatus('/#/notices')" translate="global.header.notices"></a></li>
+										<li class="menu-item menu-item-principles"><a ng-click="userFormStatus('/#/9-guiding-principles')" translate="global.header.guidingPrinciples"></a></li>
+										<li class="menu-item menu-item-help">
+											<a>Help</a>
+											<ul class="sub-menu">
+												<li><a class="menu-item menu-item-faq" ng-click="userFormStatus('/#/faq')" translate="global.header.faq"></a></li>
+												<li><a class="menu-item menu-item-tour" ng-click="userFormStatus('/#/tour')" translate="global.header.tour"></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-container">
+			<div ng-view autoscroll="true" class="animate-view"></div>
+			<div id="dover-dots-top"></div>
+			<div id="dover-dots-bottom"></div>
+			<tour></tour>
+		</div>
+		<div id="admin-footer" class="footer" ng-controller="footerController as header">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div id="footer-contact">
+							<p translate="global.footer.contact.title"></p>
+							<div id="button">
+								<a ng-click="userFormStatus('/#/contact')" translate="global.footer.contact.button"></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div id="footer-company" style="">
+							<p>&copy;2017 Dover Corporation</p>
+							<p translate="global.footer.contact.developed"></p>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div id="logged-in-status">
+							<div id="logged-in">
+								<span translate="global.footer.loginStatus.loggedIn"></span> <span>Dover</span>
+								<div id="sign-out">
+									<a href="" translate="global.footer.loginStatus.signOut"></a>
+								</div>
+							</div>
+							<div class="logged-out">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Helper Scripts -->
+			<script type="text/javascript" src="/assets/angular/js/helper/jquery-3.1.1.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/jquery.mmenu.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/jquery.mmenu.fixedelements.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/dropzone.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/scrollMagic/TweenMax.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/scrollMagic/ScrollMagic.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/scrollMagic/animation.gsap.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/hopscotch/hopscotch.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/rangetouch.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/chartist.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/script.js"></script>
+		<!-- Angular Scripts -->
+			<script type="text/javascript" src="/assets/angular/js/angular/angular.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-route.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-animate.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-cookies.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-translate.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-translate-loader-static-files.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-scroll-magic.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-sanitize.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/helper/moment.min.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-datetimepicker/datetimepicker.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/angular-datetimepicker/datetimepicker.templates.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/app.js"></script>
+			<script type="text/javascript" src="/assets/angular/js/angular/routes.js"></script>
+			
+		<!-- Config Files -->
+			<script type="text/javascript" src="/assets/angular/js/angular/config/co-languages.js"></script>
+			
+		<!-- Services -->
+			<script type="text/javascript" src="/assets/angular/js/services/main/s-main.js"></script>
+			<!-- Route Services-->
+				<script type="text/javascript" src="/assets/angular/js/services/unsafeAct/s-unsafeAct.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/services/unsafeCondition/s-unsafeCondition.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/services/safe/s-safe.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/services/nearMiss/s-nearMiss.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/services/improvement/s-improvement.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/services/safetyAudit/s-safetyAudit.js"></script>
+				
+		<!-- Controllers -->
+			<!-- Misc. Controllers -->
+				<script type="text/javascript" src="/assets/angular/js/controllers/helper/c-misc.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/pin/c-pin.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/location/c-location.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/notices/c-notices.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/home/c-home.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/header/c-header.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/footer/c-footer.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/header/c-mmenu.js"></script>
+			<!-- Route Controllers-->
+				<script type="text/javascript" src="/assets/angular/js/controllers/unsafeAct/c-unsafeAct.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/unsafeCondition/c-unsafeCondition.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/safe/c-safe.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/nearMiss/c-nearMiss.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/improvement/c-improvement.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/controllers/safetyAudit/c-safetyAudit.js"></script>
+				
+		<!-- Directives -->
+			<!-- Misc. Directives -->
+				<script type="text/javascript" src="/assets/angular/js/directives/location/d-location.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/helper/d-ngEnter.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/helper/d-tour.js"></script>
+			<!-- Unsafe Act -->
+				<script type="text/javascript" src="/assets/angular/js/directives/unsafeAct/d-unsafeAct2.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/unsafeAct/d-unsafeAct3.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/unsafeAct/d-unsafeActValidation.js"></script>
+			<!-- Unsafe Condition -->
+				<script type="text/javascript" src="/assets/angular/js/directives/unsafeCondition/d-unsafeCondition2.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/unsafeCondition/d-unsafeCondition3.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/unsafeCondition/d-unsafeConditionValidation.js"></script>
+			<!-- Safe -->
+				<script type="text/javascript" src="/assets/angular/js/directives/safe/d-safe2.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/safe/d-safe3.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/safe/d-safeValidation.js"></script>
+			<!-- Near Miss -->
+				<script type="text/javascript" src="/assets/angular/js/directives/nearMiss/d-nearMiss2.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/nearMiss/d-nearMissValidation.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/nearMiss/d-nearMissDropzone.js"></script>
+			<!-- Opportunity For Improvement -->
+				<script type="text/javascript" src="/assets/angular/js/directives/improvement/d-improvement2.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/improvement/d-improvement3.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/improvement/d-improvementValidation.js"></script>
+			<!-- Safety Audit -->
+				<script type="text/javascript" src="/assets/angular/js/directives/safetyAudit/d-safetyAudit2.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/safetyAudit/d-safetyAudit3.js"></script>
+				<script type="text/javascript" src="/assets/angular/js/directives/safetyAudit/d-safetyAuditValidation.js"></script>
+	</body>
+</html>

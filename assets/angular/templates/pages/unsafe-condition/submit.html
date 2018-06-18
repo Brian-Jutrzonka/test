@@ -1,0 +1,244 @@
+<div class="container">
+	<div class="row">
+			<div class="col-md-12">
+				<div id="submit-content" class="form-content">
+					<h1 id="form-heading" translate="global.submit.title"></h1>
+					<div class="form-input-submit-section">
+						<div class="form-input-submit-label" translate="global.location.location"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL11N}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.area"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL12}}
+						</p>
+					</div>
+				</div>
+        <div class="form-input-submit-section" ng-if="listL12 === 'Other'">
+					<div class="form-input-submit-label" translate="global.location.other"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL1O}}
+						</p>
+					</div>
+				</div>
+        <div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.location.name"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listL1N}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="unsafeCondition.page2.title"></div>
+					<div class="form-input-submit-text">
+						<div ng-repeat="act in listA21" ng-if="act[1] === true">
+							<h3>
+								{{act[0]}}
+							</h3>
+						<!-- subCheck1 boxes -->
+							<div class="sub-section">
+								<h4>
+									{{act[2][0]}}
+								</h4>
+							<!-- If the sub1 second level is checkboxes -->
+								<div ng-repeat="subAct in act[2][1]" ng-if="subAct[1] === true">
+									<p>
+										{{subAct[0]}}
+									</p>
+									<!-- If subSub is a checkbox -->
+									<div ng-if="subAct[2][1].length > 1" class="sub-sub-section">
+										<h5>
+											{{subAct[2][0]}}
+										</h5>
+										<div ng-repeat="subSubAct in subAct[2][1]" ng-if="subSubAct[1] === true">
+											<p>
+												{{subSubAct[0]}}
+											</p>
+										</div>
+									</div>
+									<!-- If subSub is a Radio Button -->
+									<div ng-if="subAct[2][1].length === 1" class="sub-sub-section">
+										<h5>
+											{{subAct[2][0]}}
+										</h5>
+										<p>
+											{{subAct[2][1][0]}}
+										</p>
+									</div>
+								</div>
+							<!-- If the sub1 second level is radio buttons -->
+								<div ng-if="act[2][1][0][1] !== true && act[2][1][0][1] !== false">
+									<p>
+										{{act[2][1][0]}}
+									</p>
+									<!-- If subSub is a checkbox -->
+									<div ng-if="act[2][1][1][1][0][1] === true || act[2][1][1][1][0][1] === false" class="sub-sub-section">
+										<h5>
+											{{act[2][1][1][0]}}
+										</h5>
+										<div ng-repeat="subSubAct in act[2][1][1][1]" ng-if="subSubAct[1] === true">
+											<p>
+												{{subSubAct[0]}}
+											</p>
+										</div>
+									</div>
+									<!-- If subSub is a Radio Button -->
+									<div ng-if="act[2][1][1][1][0][1] !== true && act[2][1][1][1][0][1] !== false" class="sub-sub-section">
+										<div class="sub-sub-section">
+											<h5>
+												{{act[2][1][1][0]}}
+											</h5>
+											<p>
+												{{act[2][1][1][1][0]}}
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- subCheck2 boxes -->
+							<div class="sub-section">
+								<h4>
+									{{act[3][0]}}
+								</h4>
+							<!-- If the sub1 second level is checkboxes -->
+								<div ng-repeat="subAct in act[3][1]" ng-if="subAct[1] === true">
+									<p>
+										{{subAct[0]}}
+									</p>
+									<!-- If subSub is a checkbox -->
+									<div ng-if="subAct[2][1].length > 1" class="sub-sub-section">
+										<h5>
+											{{subAct[2][0]}}
+										</h5>
+										<div ng-repeat="subSubAct in subAct[2][1]" ng-if="subSubAct[1] === true">
+											<p>
+												{{subSubAct[0]}}
+											</p>
+										</div>
+									</div>
+									<!-- If subSub is a Radio Button -->
+									<div ng-if="subAct[2][1].length === 1" class="sub-sub-section">
+										<h5>
+											{{subAct[2][0]}}
+										</h5>
+										<p>
+											{{subAct[2][1][0]}}
+										</p>
+									</div>
+								</div>
+							<!-- If the sub1 second level is radio buttons -->
+								<div ng-if="act[3][1][0][1] !== true && act[3][1][0][1] !== false">
+									<p>
+										{{act[3][1][0]}}
+									</p>
+									<!-- If subSub is a checkbox -->
+									<div ng-if="act[3][1][1][1][0][1] === true || act[3][1][1][1][0][1] === false" class="sub-sub-section">
+										<h5>
+											{{act[3][1][1][0]}}
+										</h5>
+										<div ng-repeat="subSubAct in act[3][1][1][1]" ng-if="subSubAct[1] === true">
+											<p>
+												{{subSubAct[0]}}
+											</p>
+										</div>
+									</div>
+									<!-- If subSub is a Radio Button -->
+									<div ng-if="act[3][1][1][1][0][1] !== true && act[3][1][1][1][0][1] !== false" class="sub-sub-section">
+										<div class="sub-sub-section">
+											<h5>
+												{{act[3][1][1][0]}}
+											</h5>
+											<p>
+												{{act[3][1][1][1][0]}}
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.baseFreeform.what"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA31}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.baseFreeform.severity"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA3R}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.baseFreeform.when.title"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA32 | date: 'MM/dd/yyyy @ h:mma'}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.baseFreeform.why"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA34}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.baseFreeform.suggestions"></div>
+					<div class="form-input-submit-text">
+						<p>
+							{{listA35}}
+						</p>
+					</div>
+				</div>
+				<div class="form-input-submit-section">
+					<div class="form-input-submit-label" translate="global.submit.subtitles.photos"></div>
+					<div class="form-input-submit-text">
+						<div class="form-input-submit-text">
+							<div class="dropzone-preview" ng-repeat="file in dropzoneThumb track by $index">
+								<img class="dropzone-file-image" ng-src="{{file}}" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="blue-button">
+						<a href="/#/unsafe-condition/edit" translate="global.buttons.editButton"></a>
+					</div>
+					<div class="dover-buttons" id="submit-button"> 
+						<form id="submit-form" class="submit-form" action="/submit-report.html" method="post" ng-click="submitRoute()">
+							<input type="hidden" name="routeName" id="routeName" value=""/>
+							<input type="hidden" name="listL11" id="listL11" value=""/>
+							<input type="hidden" name="listL12" id="listL12" value=""/>
+							<input type="hidden" name="otherArea" id="otherArea" value=""/>
+							<input type="hidden" name="listL1N" id="listL1N" value=""/>
+							<input type="hidden" name="listA21[]" id="listA21" value=""/>
+							<input type="hidden" name="listA3R" id="listA3R" value=""/>
+							<input type="hidden" name="listA31" id="listA31" value=""/>
+							<input type="hidden" name="listA32" id="listA32" value=""/>
+							<input type="hidden" name="listA34" id="listA34" value=""/>
+							<input type="hidden" name="listA35" id="listA35" value=""/>
+							<input type="hidden" name="listA36[]" id="listA36" value=""/>
+							<input ng-click="submitRoute()" type="submit" name="Submit" value="{{'global.buttons.submitButton' | translate}}"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<tour></tour>

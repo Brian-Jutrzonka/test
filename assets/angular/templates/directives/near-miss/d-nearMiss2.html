@@ -1,0 +1,138 @@
+<div class="directive">
+	<div class="form-input-section">
+		<div class="form-input-label textarea-input-label">
+			<span translate="nearMiss.page2.description.title"></span><span class="form-required">*</span>
+		</div>
+		<div class="form-input textarea-form-input">
+			<textarea class="form-element-required" rows="4" cols="50" ng-model="listA31" ng-change="changeA('A31', listA31)" maxlength="700"/>
+		</div>
+		<div class="route-debug">Name: listA31 <br> Value: {{listA31}}</div>
+	</div>
+	<div class="form-input-section">
+		<div class="form-input-label range-input-label">
+			<span>Severity</span>
+		</div>
+		<div class="form-input range-form-input">
+			<div class="range-form-input-inner">
+				<div class="range-form-input-h-line">
+					<div id="range-form-input-line-1" class="range-form-input-line">
+						<div class="range-form-input-v-line"></div>
+						<div class="range-form-input-title green-text">1</div>
+						<div class="range-form-input-key range-form-input-low range-form-input-1">
+							No potential for injury, illness, or incident – Ouch!
+						</div>
+					</div>
+					<div id="range-form-input-line-2" class="range-form-input-line">
+						<div class="range-form-input-v-line"></div>
+						<div class="range-form-input-title green-text">2</div>
+						<div class="range-form-input-key range-form-input-low range-form-input-2">
+							Potential for minor injury, illness, or incident
+						</div>
+					</div>
+					<div id="range-form-input-line-3" class="range-form-input-line">
+						<div class="range-form-input-v-line"></div>
+						<div class="range-form-input-title yellow-text">3</div>
+						<div class="range-form-input-key range-form-input-medium range-form-input-3">
+							Potential for a recordable injury, illness, or incident
+						</div>
+					</div>
+					<div id="range-form-input-line-4" class="range-form-input-line">
+						<div class="range-form-input-v-line"></div>
+						<div class="range-form-input-title red-text">4</div>
+						<div class="range-form-input-key range-form-input-high range-form-input-4">
+							Potential for major incident, or major injury or illness causing short term disability
+						</div>
+					</div>
+					<div id="range-form-input-line-5" class="range-form-input-line">
+						<div class="range-form-input-v-line"></div>
+						<div class="range-form-input-title red-text">5</div>
+						<div class="range-form-input-key range-form-input-high range-form-input-5">
+							Potential for major incident, or major injury or illness causing a fatality or long term disability
+						</div>
+					</div>
+				</div>
+				<input type="range" id="range-input-severity" class="range-input" ng-model="listA3R" ng-change="changeA('A3R', listA3R)" min="1" max="5"/>
+			</div>
+		</div>
+		<div class="route-debug">Name: listA3R <br> Value: {{listA3R}}</div>
+	</div>
+	<div class="form-input-section textarea-input-label">
+		<div class="form-input-label">
+			<span translate="nearMiss.page2.beforePhotos.title"></span> <span translate="global.uploadPhotos.max"></span>
+		</div>
+		<div class="form-input textarea-form-input">
+			<form class="dropzone dz-clickable" id="dropzone1" dropzone="dropzoneConfig" ng-click="addDropzoneID('A32A', 0);">
+				<div class="dz-default dz-message"><span><i class="fa fa-camera" aria-hidden="true"></i> <span translate="global.uploadPhotos.button"></span></span></div>
+			</form>
+		</div>
+		<div class="dropzone-container">
+			<div class="form-input-label textarea-input-label" translate="global.uploadPhotos.messageTitle"></div>
+			<div class="dropzone-previews dropzone-previews0">
+				<div class="dropzone-no-files" ng-if="dropzone[0].length <= 0" translate="global.uploadPhotos.messageNone"></div>
+				<div class="dropzone-error inactive dropzone-error0" translate="global.uploadPhotos.error"></div>
+				<div class="dropzone-preview" ng-repeat="file in dropzoneThumb[0] track by $index">
+					<div class="success-button"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="remove-button" ng-click="removeFile('A32R', $index);"><i class="fa fa-times" aria-hidden="true"></i></div>
+					<img class="dropzone-file-image" ng-src="{{file}}" />
+				</div>
+			</div>
+			<div class="dropzone-wait-container dropzone-wait-container0">	
+				<div class="dropzone-wait">
+					<img src="/assets/angular/images/loading-dropzone.gif" />
+					<span translate="global.uploadPhotos.messageLoading"></span>
+				</div>
+			</div>
+			<div class="route-debug">Name: listA32 <br> Value: {{dropzone[0]}}</div>
+		</div>
+	</div>
+	<div class="form-input-section textarea-input-label">
+		<div class="form-input-label" translate="nearMiss.page2.corrective.title"></div>
+		<div class="form-input textarea-form-input">
+			<textarea rows="4" cols="50" ng-model="listA33" ng-change="changeA('A33', listA33)" maxlength="700"/>
+		</div>
+		<div class="route-debug">Name: listA33 <br> Value: {{listA33}}</div>
+	</div>
+	<div class="form-input-section textarea-input-label">
+		<div class="form-input-label">
+			<span translate="nearMiss.page2.afterPhotos.title"></span> <span translate="global.uploadPhotos.max"></span>
+		</div>
+		<div class="form-input textarea-form-input">
+			<form class="dropzone dz-clickable" id="dropzone2" dropzone="dropzoneConfig" ng-click="addDropzoneID('A34A', 1);">
+				<div class="dz-default dz-message"><span><i class="fa fa-camera" aria-hidden="true"></i> <span translate="global.uploadPhotos.button"></span></span></div>
+			</form>
+		</div>
+		<div class="dropzone-container">
+			<div class="form-input-label textarea-input-label" translate="global.uploadPhotos.messageTitle"></div>
+			<div class="dropzone-previews dropzone-previews1">
+				<div class="dropzone-no-files" ng-if="dropzone[1].length === 0" translate="global.uploadPhotos.messageNone"></div>
+				<div class="dropzone-error inactive dropzone-error1" translate="global.uploadPhotos.error"></div>
+				<div class="dropzone-preview" ng-repeat="file in dropzoneThumb[1] track by $index">
+					<div class="success-button"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="remove-button" ng-click="removeFile('A34R', $index);"><i class="fa fa-times" aria-hidden="true"></i></div>
+					<img class="dropzone-file-image" ng-src="{{file}}" />
+				</div>
+			</div>
+			<div class="dropzone-wait-container dropzone-wait-container1">
+				<div class="dropzone-wait">
+					<img src="/assets/angular/images/loading-dropzone.gif" />
+					<span translate="global.uploadPhotos.messageLoading"></span>
+				</div>
+			</div>
+			<div class="route-debug">Name: listA34 <br> Value: {{dropzone[1]}}</div>
+		</div>
+	</div>
+	<div class="form-input-section">
+		<div class="form-radio-container form-radio-container-long">
+			<div class="form-input form-radio-button-input">
+				<div class="form-radio-buttons-container">
+					<div class="form-radio-button">
+						<input type="checkbox" ng-model="listA35" ng-click="changeA('A35', '')" class="form-radio-buttons" />
+						<div class="form-radio-check"></div>
+					</div>
+					<div class="form-radio-label" translate="nearMiss.page2.email.title"></div>
+				</div>
+				<div class="route-debug">Name: listA35 <br> Value: {{listA35}}</div>
+			</div>
+		</div>
+	</div>
+</div>

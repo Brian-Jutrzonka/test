@@ -1,0 +1,29 @@
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media (min-width: 1400px) { @content; }
+  }
+  @if $point == lg {
+    @media (min-width: 1199px) { @content; }
+  }
+  @if $point == md {
+    @media (max-width: 1199px) and (min-width: 992px) { @content; }
+  }
+  @if $point == md2 {
+    @media (min-width: 992px) { @content; }
+  }
+  @if $point == mdsm {
+    @media (max-width: 1199px) and (min-width: 767px) { @content; }
+  }
+  @if $point == sm {
+    @media (max-width: 991px) and (min-width: 767px) { @content; }
+  }
+  @if $point == sm2 {
+    @media (max-width: 991px) { @content; }
+  }
+  @if $point == xs {
+    @media (max-width: 767px) { @content; }
+  }
+  @if $point == xxs {
+    @media (max-width: 500px) { @content; }
+  }
+}

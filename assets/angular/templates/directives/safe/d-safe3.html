@@ -1,0 +1,71 @@
+<div class="directive">
+	<div class="form-input-section">
+		<div class="form-input-label textarea-input-label">
+			<span translate="global.baseFreeform.what"></span><span class="form-required">*</span>
+		</div>
+		<div class="form-input textarea-form-input">
+			<textarea class="form-element-required" rows="4" cols="50" ng-model="listA31" ng-change="changeA3('A31', listA31)" maxlength="700"/>
+		</div>
+		<div class="route-debug">Name: listA31 <br> Value: {{listA31}}</div>
+	</div>
+	<div class="form-input-section textarea-input-label">
+		<div class="form-input-label" translate="global.baseFreeform.when.title"></div>
+		<div class="dropdown dropdown1-parent form-input datetime">
+			<div class="datetime-text">
+				{{listA32 | date: 'MM/dd/yyyy @ h:mma'}}
+			</div>
+			<ul class="datetime-dropdown-menu dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<datetimepicker data-ng-model="listA32" ng-change="changeA3('A32', listA32)" data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"></datetimepicker>
+			</ul>
+			<div class="datetime-link">
+				<a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target=".dropdown1-parent">
+					<i class="fa fa-calendar" aria-hidden="true"></i> <span translate="global.baseFreeform.when.button"></span>
+				</a>				
+			</div>
+		</div>
+		<div class="route-debug">Name: listA32 <br> Value: {{listA32}}</div>
+	</div>
+	<div class="form-input-section">
+		<div class="form-radio-container form-radio-container-long">
+			<div class="form-input form-radio-button-input">
+				<div class="form-radio-buttons-container">
+					<div class="form-radio-button">
+						<input type="checkbox" ng-model="listA33" ng-click="changeA3('A33', '')" class="form-radio-buttons" />
+						<div class="form-radio-check"></div>
+					</div>
+					<div class="form-radio-label" translate="somethingSafe.page3.email.title"></div>
+				</div>
+			</div>
+			<div class="route-debug">Name: listA33 <br> Value: {{listA33}}</div>
+		</div>
+	</div>
+	<div class="form-input-section textarea-input-label">
+		<div class="form-input-label">
+				<span translate="global.uploadPhotos.title"></span> <span translate="global.uploadPhotos.max"></span>
+		</div>
+		<div class="form-input textarea-form-input">
+			<form class="dropzone dz-clickable" id="dropzone2" dropzone="dropzoneConfig" ng-click="addDropzoneID('A34A', 1);">
+				<div class="dz-default dz-message"><span><i class="fa fa-camera" aria-hidden="true"></i> <span translate="global.uploadPhotos.button"></span></span></div>
+			</form>
+		</div>
+		<div class="dropzone-container">
+			<div class="form-input-label textarea-input-label" translate="global.uploadPhotos.messageTitle"></div>
+			<div class="dropzone-previews">
+				<div class="dropzone-no-files" ng-if="dropzone.length === 0" translate="global.uploadPhotos.messageNone"></div>
+				<div class="dropzone-error inactive" translate="global.uploadPhotos.error"></div>
+				<div class="dropzone-preview" ng-repeat="file in dropzoneThumb track by $index">
+					<div class="success-button"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="remove-button" ng-click="removeFile('A34R', $index);"><i class="fa fa-times" aria-hidden="true"></i></div>
+					<img class="dropzone-file-image" ng-src="{{file}}" />
+				</div>
+			</div>
+			<div class="dropzone-wait-container dropzone-wait-container0">
+				<div class="dropzone-wait">
+					<img src="/assets/angular/images/loading-dropzone.gif" />
+					<span translate="global.uploadPhotos.messageLoading"></span>
+				</div>
+			</div>
+			<div class="route-debug">Name: listA34 <br> Value: {{dropzone}}</div>
+		</div>
+	</div>
+</div>

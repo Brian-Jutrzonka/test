@@ -1,0 +1,92 @@
+<div class="directive safety-audit-3-section">
+	<div class="form-radio-container">
+		<div class="route-debug">Name: listA21 <br> Value: {{listA21}}</div>
+		<div class="safety-audit-checkboxes" ng-repeat="check in list">
+			<div id="{{check.aElName | limitTo:1}}{{check.aElID}}" class="safety-audit-anchor-links"></div>
+			<div class="form-radio-label">
+				<h3>{{check.aElName}}<span class="form-required">*</span></h3>
+			</div>
+			<div class="form-input">
+<!--				<select class="form-element form-element-required" ng-model="$parent.listA21[$index][1]" ng-change="changeA('A21A', '', $parent.listA21[$index][0], $parent.listA21[$index][1], $index)">
+					<option value="" translate="safetyAudit.page3.options.choose"></option>
+					<option value="Applicable & Inspected" style="color:#00935B;" translate="safetyAudit.page3.options.applicable">Applicable & Inspected</option>
+					<option value="Not Applicable" style="color:#2D009C;" translate="safetyAudit.page3.options.notApplicable">Not Applicable</option>
+					<option value="Not Inspected" style="color:#C8002F;" translate="safetyAudit.page3.options.notInspected">Not Inspected</option>
+				</select>-->
+				<div class="form-input form-radio-button-input safety-audit-main-radio">
+					<div class="safety-audit-main-radio-inner">
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="radio" ng-model="$parent.listA21[$index][1]" name="safety-audit-check-{{$index}}" value="Applicable & Inspected" ng-click="changeA('A21A', '', $parent.listA21[$index][0], $parent.listA21[$index][1], $index)" class="form-radio-buttons form-element-required" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label" translate="safetyAudit.page3.options.applicable"></div>
+						</div>
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="radio" ng-model="$parent.listA21[$index][1]" name="safety-audit-check-{{$index}}" value="Not Applicable" ng-click="changeA('A21A', '', $parent.listA21[$index][0], $parent.listA21[$index][1], $index)" class="form-radio-buttons form-element-required" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label" translate="safetyAudit.page3.options.notApplicable"></div>
+						</div>
+						<div class="form-radio-buttons-container">
+							<div class="form-radio-button">
+								<input type="radio" ng-model="$parent.listA21[$index][1]" name="safety-audit-check-{{$index}}" value="Not Inspected" ng-click="changeA('A21A', '', $parent.listA21[$index][0], $parent.listA21[$index][1], $index)" class="form-radio-buttons form-element-required" />
+								<div class="form-radio-check"></div>
+							</div>
+							<div class="form-radio-label" translate="safetyAudit.page3.options.notInspected"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="safety-audit-input-container" ng-if="$parent.listA21[$index][1] === 'Applicable & Inspected'">
+				<div class="form-input-label" translate="safetyAudit.page3.global.inspection"></div>
+				<div class="" ng-repeat="desc in check.aElDesc">
+					<div class="form-radio-buttons-container">
+						<div class="form-radio-button">
+							<input type="checkbox" ng-model="$parent.listA21[$parent.$index][2][$index][1]" ng-click="changeA('A21', check.aElDesc, desc, $parent.listA21[$parent.$index][2][$index][1], $parent.$index)" class="form-radio-buttons" name="{{desc}}" />
+							<div class="form-radio-check"></div>
+						</div>
+						<div class="form-radio-label">
+							{{check.aElDesc[$index]}}
+						</div>
+					</div>
+				</div>
+				<div class="form-input-section textarea-input-label">
+					<div class="form-input-label" translate="safetyAudit.page3.global.comments"></div>
+					<div class="form-input textarea-form-input">
+						<textarea rows="4" ng-model="$parent.listA21[$index][3]" ng-change="changeA('A21B', '', '', $parent.listA21[$index][3], $index)" maxlength="700"/>
+					</div>
+				</div>
+				<div class="form-input-section textarea-input-label">
+					<div class="form-input-label">
+						<span translate="global.uploadPhotos.title"></span> <span translate="global.uploadPhotos.max"></span>
+					</div>
+					<div class="form-input textarea-form-input">
+						<form class="dropzone dz-clickable" id="dropzone2" dropzone="dropzoneConfig" ng-click="addDropzoneID('A21D', $index);">
+							<div class="dz-default dz-message"><span><i class="fa fa-camera" aria-hidden="true"></i> <span translate="global.uploadPhotos.button"></span></span></div>
+						</form>
+					</div>
+					<div class="dropzone-container">
+						<div class="form-input-label textarea-input-label" translate="global.uploadPhotos.messageTitle"></div>
+						<div class="dropzone-previews dropzone-previews{{$index}}">
+							<div class="dropzone-no-files" ng-if="listA21[$index][4].length === 0" translate="global.uploadPhotos.messageNone"></div>
+							<div class="dropzone-error inactive" translate="global.uploadPhotos.error"></div>
+							<div class="dropzone-preview" ng-repeat="file in listA21Thumb[$index] track by $index">
+								<div class="success-button"><i class="fa fa-check" aria-hidden="true"></i></div>
+								<div class="remove-button" ng-click="removeFile('A21DR', $index, $parent.$index);"><i class="fa fa-times" aria-hidden="true"></i></div>
+								<img class="dropzone-file-image" ng-src="{{file}}" />
+							</div>
+						</div>
+						<div class="dropzone-wait-container dropzone-wait-container{{$index}}">
+							<div class="dropzone-wait">
+								<img src="/assets/angular/images/loading-dropzone.gif" />
+								<span translate="global.uploadPhotos.messageLoading"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

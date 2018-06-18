@@ -1,0 +1,77 @@
+//Footer Styles
+	.footer {
+		padding: 40px 0px;
+		border-top: 4px solid $primary-color;
+		text-align:right;
+		@include breakpoint(xs) {
+			padding: 30px 0px;
+		}
+		#footer-contact {
+			text-align:left;
+			font-weight:500;
+			@include breakpoint(xs) {
+				text-align:center;
+				margin-bottom: 20px;
+			}
+			p {
+				margin-bottom: 15px;
+				font-size: 12pt;
+			}
+			#button {
+				padding: 5px 0px;
+				display:inline-block;
+				a {
+					color: #fff;
+					background-color: $primary-color;
+					padding: 6px 20px;
+					border: 2px solid $primary-color;
+					font-size:10pt;
+					&:hover {
+						text-decoration:none;
+						background-color: #fff;
+						color: #004b8d;
+						cursor:pointer;
+					}
+					i {
+						margin-right:3px;
+					}
+				}
+			}
+		}
+		#footer-company {
+			margin-top:10px;
+			text-align: center;
+			@include breakpoint(xs) {
+				margin-bottom: 15px;
+			}
+			p {
+				font-weight:bold;
+				font-size:10pt;
+				margin-bottom:5px;
+			}
+		}
+		#logged-in-status {
+			font-weight: 500;
+			font-size: 12pt;
+			@include breakpoint(xs) {
+				text-align:center;
+			}
+			#sign-out {
+				padding: 7px 0px;
+				margin-top: 12px;
+				a {
+					color: #fff;
+					background-color: $primary-color;
+					padding: 6px 20px;
+					border: 2px solid $primary-color;
+					font-size:10pt;
+					&:hover {
+						text-decoration:none;
+						background-color: #fff;
+						color: #004b8d;
+						cursor:pointer;
+					}
+				}			
+			}
+		}
+	}

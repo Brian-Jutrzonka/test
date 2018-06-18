@@ -1,0 +1,58 @@
+<div class="form-input-section">
+	<div class="form-input-label">
+		<span translate="global.location.location"></span><span class="form-required">*</span>
+	</div>
+	<div class="form-input unsafe-form-input">
+		<select class="form-element-required" ng-model="listL11" ng-change="changeLocation('L11', listL11)">
+			<option ng-repeat="location in locations" ng-if="location.parent === '6'" value="{{location.guid}}">{{location.title}}</option>
+		</select>
+	</div>
+	<div class="form-input-label">
+		<span translate="global.location.area"></span><span class="form-required">*</span>
+	</div>
+	<!--ROUTES OTHER THAN SAFETY AUDIT ROUTE-->
+	<div class="form-input unsafe-form-input" ng-if="listL12T ==='11'">
+		<select class="form-element-required" ng-model="listL12" ng-change="changeLocation('L12', listL12)">
+			<option ng-if="listL11Length === 0" value="" translate="global.location.areaPlaceholder"></option>
+			<option ng-repeat="location in locations" ng-if="location.parent === listL11 && location.template === '11'" value="{{location.title}}">{{location.title}}</option>
+			<option value="Other">Other</option>
+		</select>
+	</div>
+	<!--SAFETY AUDIT ROUTE-->
+	<div class="form-input unsafe-form-input" ng-if="listL12T ==='12'">
+		<select class="form-element-required" ng-model="listL12" ng-change="changeLocation('L12', listL12)">
+			<option ng-if="listL11Length === 0" value="" translate="global.location.areaPlaceholder"></option>
+			<option ng-repeat="location in locations" ng-if="location.parent === listL11 && location.template === '12'" value="{{location.title}}">{{location.title}}</option>
+		</select>
+	</div>
+	<!--WHERE ARE YOU (ONLY FOR OTHER)-->
+	<div class="form-input unsafe-form-input" ng-if="listL12 === 'Other'">
+		<div class="form-input-label">
+			<span translate="global.location.other"></span>
+		</div>
+		<div class="form-input unsafe-form-input">
+			<div class="form-input textarea-form-input">
+				<input type="text" ng-model="listL1O" ng-change="changeLocation('L1O', listL1O)" />
+			</div>
+		</div>
+	</div>
+	<!--WHO ARE YOU-->
+	<div class="form-input unsafe-form-input" ng-switch on="listL11">
+		<div ng-switch-when="14"></div>
+		<div ng-switch-when="15"></div>
+		<div ng-switch-when="17"></div>
+		<div ng-switch-when="24"></div>
+		<div ng-switch-default>
+			<div class="form-input-label">
+				<span translate="global.location.name"></span> <span translate="global.location.uk" class="sub-span"></span>
+			</div>
+			<div class="form-input unsafe-form-input">
+				<div class="form-input textarea-form-input">
+					<input type="text" ng-model="listL1N" ng-change="changeLocation('L1N', listL1N)" />
+				</div>
+				<div class="route-debug">Name: listL1N <br> Value: {{listL1N}}</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

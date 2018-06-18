@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-content">
+				<h1 id="form-heading" translate="home.routes.safetyAudit.title"></h1>
+				<h3 translate="global.location.title"></h3>
+				<location></location>
+				<div class="form-input-section textarea-input-label">
+					<div class="form-input-label"><span translate="global.location.specificArea"></span> <span translate="global.location.optional"></span></div>
+					<div class="form-input textarea-form-input">
+						<input type="text" ng-model="listL13" ng-change="changeLocation('L13', listL13)" />
+					</div>
+				</div>
+				<div id="errors" class="errors-container"></div>
+				<div class="dover-buttons-section">
+					<safety-a-validation></safety-a-validation>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<tour></tour>

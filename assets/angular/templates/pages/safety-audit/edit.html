@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="submit-content" class="form-content">
+				<h1 id="form-heading" translate="global.submit.title"></h1>
+				<location></location>
+				<div class="form-input-section textarea-input-label">
+					<div class="form-input-label"><span translate="global.location.specificArea"></span> <span translate="global.location.optional"></span></div>
+					<div class="form-input textarea-form-input">
+						<input type="text" ng-model="listL13" ng-change="changeLocation('L13', listL13)" maxlength="700"/>
+					</div>
+				</div>
+				<safety-a-3></safety-a-3>
+				<div class="dover-buttons-section">
+					<div class="dover-buttons" id="submit-button"> 
+						<form id="submit-form" class="submit-form" action="/submit-report.html" method="post">
+							<input type="hidden" name="routeName" id="routeName" value=""/>
+							<input type="hidden" name="listL11" id="listL11" value=""/>
+							<input type="hidden" name="listL12" id="listL12" value=""/>
+							<input type="hidden" name="listL1N" id="listL1N" value=""/>
+							<input type="hidden" name="listL13" id="listL13" value=""/>
+							<input type="hidden" name="listA21" id="listA21" value=""/>
+							<input ng-click="submitRoute()" type="submit" name="Submit" value="{{'global.buttons.submitButton' | translate}}"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<tour></tour>

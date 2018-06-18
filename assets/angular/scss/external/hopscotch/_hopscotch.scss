@@ -1,0 +1,524 @@
+/**! hopscotch - v0.3.1
+*
+* Copyright 2017 LinkedIn Corp. All rights reserved.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+ * This fade animation is based on Dan Eden's animate.css (http://daneden.me/animate/), under the terms of the MIT license.
+ *
+ * Copyright 2013 Dan Eden.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .4s;
+  -moz-animation-duration: .4s;
+  -ms-animation-duration: .4s;
+  -o-animation-duration: .4s;
+  animation-duration: .4s;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -ms-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-down {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+@-o-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-right {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+@-o-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-left {
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+div.hopscotch-bubble .hopscotch-nav-button {
+  font-weight:500;
+}
+div.hopscotch-bubble .hopscotch-nav-button:hover {
+
+
+}
+
+div.hopscotch-bubble .hopscotch-nav-button.next {
+	border: 2px solid $primary-color;
+	background-color: $primary-color;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  padding: 3px 15px;
+	&:after {
+		content:"\f061";
+		font-family:FontAwesome;
+		display:inline-block;
+		position:relative;
+    margin-left: 10px;
+		font-weight: 400;
+	}
+}
+div.hopscotch-bubble .hopscotch-nav-button.next:hover {
+  background-color: #fff;
+	color: $primary-color;
+}
+div.hopscotch-bubble .hopscotch-nav-button.prev {
+	border: 2px solid $primary-color;
+	background-color: $primary-color;
+  color: #fff;
+  margin: 0 0 0 10px;
+  padding: 3px 15px;
+	display:none!important;
+}
+div.hopscotch-bubble .hopscotch-nav-button.prev:hover {
+  background-color: #fff;
+	color: $primary-color;
+}
+div.hopscotch-bubble {
+  background-color: $green-color;//#fcff00
+  border-top: 5px solid $purple-color;
+  color: #fff;
+  position: absolute;
+  z-index: 999999;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -moz-background-clip: padding;
+  /* for Mozilla browsers*/
+  -webkit-background-clip: padding;
+  /* Webkit */
+  background-clip: padding-box;
+  /*  browsers with full support */
+	width:100%;
+	top:auto!important;
+	bottom:0px;
+	left:0px!important;
+	right:0px;
+  position: fixed!important;
+	padding: 10px 0px 10px 0px;
+	@include breakpoint(sm) {
+		padding: 10px 0px 10px 0px;
+	}
+	@include breakpoint(xs) {
+		padding: 0px 0px 0px 0px;
+	}
+}
+div.hopscotch-bubble * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+div.hopscotch-bubble.animate {
+  //-moz-transition-property: top, left;
+  //-moz-transition-duration: 1s;
+  //-moz-transition-timing-function: ease-in-out;
+  //-ms-transition-property: top, left;
+  //-ms-transition-duration: 1s;
+  //-ms-transition-timing-function: ease-in-out;
+  //-o-transition-property: top, left;
+  //-o-transition-duration: 1s;
+  //-o-transition-timing-function: ease-in-out;
+  //-webkit-transition-property: top, left;
+  //-webkit-transition-duration: 1s;
+  //-webkit-transition-timing-function: ease-in-out;
+  //transition-property: top, left;
+  //transition-duration: 1s;
+  //transition-timing-function: ease-in-out;
+}
+div.hopscotch-bubble.invisible {
+  opacity: 0;
+}
+div.hopscotch-bubble.hide,
+div.hopscotch-bubble .hide,
+div.hopscotch-bubble .hide-all {
+  display: none;
+}
+div.hopscotch-bubble h3 {
+  color: #fff;
+	font-size:1.8em;
+  margin: 0 0 10px 0;
+  padding: 0;
+	@include breakpoint(sm) {
+		font-size:1.5em;
+	}
+	@include breakpoint(xs) {
+		font-size:1.2em;
+	}
+}
+div.hopscotch-bubble .hopscotch-bubble-container {
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  width:80%!important;
+	display: block;
+  margin: 0 auto;
+}
+div.hopscotch-bubble .hopscotch-content {
+	color:#fff;
+	font-weight:600;
+	line-height:1.6;
+	@include breakpoint(sm) {
+		font-size:.9em;
+	}
+	@include breakpoint(xs) {
+		font-size:.8em;
+	}
+}
+div.hopscotch-bubble .hopscotch-bubble-content {
+  margin: 0 20px 0 35px;
+}
+div.hopscotch-bubble.no-number .hopscotch-bubble-content {
+  margin: 0;
+}
+div.hopscotch-bubble .hopscotch-bubble-close {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  right: 0;
+	height: 0px;
+	width: 0px;
+	padding: 3px 5px;
+	background-color: transparent;
+	color: transparent;
+	z-index: 20;
+	outline:0 !important;
+	&:before {
+		content:"\f00d";
+		font-family:FontAwesome;
+		display:block;
+    position: absolute;
+    top: -7px;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.15;
+    width: 35px;
+    height: 35px;
+		padding-right:1px;
+    border-radius: 50%;
+    border: 3px solid $red-color;
+		background-color:$red-color;
+		@include breakpoint(sm2) {
+			font-size: 1.2em;
+			width: 30px;
+			height: 30px;
+			line-height: 1.2;
+			padding-right: 0px;
+		}
+		@include breakpoint(xs) {
+		  top: 2px;
+		}
+	}
+}
+div.hopscotch-bubble .hopscotch-bubble-close.hide,
+div.hopscotch-bubble .hopscotch-bubble-close.hide-all {
+  display: none;
+}
+div.hopscotch-bubble .hopscotch-bubble-number {
+  background-color:#fff;
+	border-radius:50%;
+  color: $primary-color;
+  display: block;
+  float: left;
+	font-size: 1.5em;
+	font-weight: 800;
+	line-height: 36px;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	margin-left: -15px;
+	@include breakpoint(sm2) {
+		font-size: 1.3em;
+		width: 30px;
+		height: 30px;
+		line-height: 32px;
+	}
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+	display:none!important;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container .hopscotch-bubble-arrow,
+div.hopscotch-bubble .hopscotch-bubble-arrow-container .hopscotch-bubble-arrow-border {
+  width: 0;
+  height: 0;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up {
+  top: -21px;
+  left: 10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow {
+  border-bottom: 17px solid #fcff00;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  position: relative;
+  top: -10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow-border {
+  border-bottom: 17px solid #fcff00;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.down {
+  bottom: -38px;
+  left: 10px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow {
+  border-top: 17px solid #fcff00;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  position: relative;
+  top: -24px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow-border {
+  border-top: 17px solid #fcff00;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left {
+  top: 10px;
+  left: -21px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow {
+  border-bottom: 17px solid transparent;
+  border-right: 17px solid #fcff00;
+  border-top: 17px solid transparent;
+  position: relative;
+  left: 7px;
+  top: -34px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow-border {
+  border-right: 17px solid $primary-color;
+  border-bottom: 17px solid transparent;
+  border-top: 17px solid transparent;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right {
+  top: 10px;
+  right: -38px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow {
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #fcff00;
+  border-top: 17px solid transparent;
+  position: relative;
+  left: -7px;
+  top: -34px;
+}
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow-border {
+  border-left: 17px solid $primary-color;
+  border-bottom: 17px solid transparent;
+  border-top: 17px solid transparent;
+}
+div.hopscotch-bubble .hopscotch-actions {
+  margin: 15px 0 0;
+  text-align: center;
+	@include breakpoint(sm2) {
+		margin: 10px 0 0;
+	}
+}

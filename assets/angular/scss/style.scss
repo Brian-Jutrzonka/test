@@ -1,0 +1,83 @@
+// Sass Main Style Directory
+
+//Main Application CSS
+	@import "breakpoints";
+	@import "main";
+	@import "header";
+	@import "footer";
+	@import "routes";
+	@import "misc-pages";
+	@import "admin";
+
+//Exernal Plugins CSS
+	@import "external/mmenu";
+	@import "external/dropzone";
+	//@import "external/bootstrap-tour";
+	//@import "external/tourtip";
+	@import "external/hopscotch/hopscotch";
+	@import "external/datetimepicker/variables";
+	@import "external/datetimepicker/core";
+	@import "external/chartist/chartist";
+//Bootstrap
+	// Core variables and mixins
+	@import "external/bootstrap/variables";
+	@import "external/bootstrap/mixins";
+	// Reset and dependencies
+	@import "external/bootstrap/normalize";
+	@import "external/bootstrap/print";
+	@import "external/bootstrap/glyphicons";
+	// Core CSS
+	@import "external/bootstrap/scaffolding";
+	@import "external/bootstrap/type";
+	@import "external/bootstrap/code";
+	@import "external/bootstrap/grid";
+	@import "external/bootstrap/tables";
+	@import "external/bootstrap/forms";
+	@import "external/bootstrap/buttons";
+	// Components
+	@import "external/bootstrap/component-animations";
+	@import "external/bootstrap/dropdowns";
+	@import "external/bootstrap/button-groups";
+	@import "external/bootstrap/input-groups";
+	@import "external/bootstrap/navs";
+	@import "external/bootstrap/navbar";
+	@import "external/bootstrap/breadcrumbs";
+	@import "external/bootstrap/pagination";
+	@import "external/bootstrap/pager";
+	@import "external/bootstrap/labels";
+	@import "external/bootstrap/badges";
+	@import "external/bootstrap/jumbotron";
+	@import "external/bootstrap/thumbnails";
+	@import "external/bootstrap/alerts";
+	@import "external/bootstrap/progress-bars";
+	@import "external/bootstrap/media";
+	@import "external/bootstrap/list-group";
+	@import "external/bootstrap/panels";
+	@import "external/bootstrap/responsive-embed";
+	@import "external/bootstrap/wells";
+	@import "external/bootstrap/close";
+	// Components w/ JavaScript
+	@import "external/bootstrap/modals";
+	@import "external/bootstrap/tooltip";
+	@import "external/bootstrap/popovers";
+	@import "external/bootstrap/carousel";
+	// Utility classes
+	@import "external/bootstrap/utilities";
+	@import "external/bootstrap/responsive-utilities";
+
+
+
+// Font Awesome
+	@import "fontawesome/variables";
+	@import "fontawesome/mixins";
+	@import "fontawesome/path";
+	@import "fontawesome/core";
+	@import "fontawesome/larger";
+	@import "fontawesome/fixed-width";
+	@import "fontawesome/list";
+	@import "fontawesome/bordered-pulled";
+	@import "fontawesome/animated";
+	@import "fontawesome/rotated-flipped";
+	@import "fontawesome/stacked";
+	@import "fontawesome/icons";
+	@import "fontawesome/screen-reader";
